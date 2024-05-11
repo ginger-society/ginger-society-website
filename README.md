@@ -23,8 +23,8 @@ Ginger Society Home page repository.
 Ginger Society is built with [Astro](https://astro.build/).
 
 ```bash
-$ npm install
-$ npm run dev
+$ yarn
+$ yarn dev
 ```
 
 ## Editing

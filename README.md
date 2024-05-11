@@ -1,10 +1,6 @@
 # Ginger Society
 
-Ginger Society is a polished, marketing website template for Astro. Browse through a [live demo](https://top-quail.cloudvent.net/).
-
-![Ginger Society template screenshot](public/images/_screenshot.png)
-
-[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/CloudCannon/sendit-astro-template)
+Ginger Society Home page repository.
 
 ## Features
 

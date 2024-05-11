@@ -35,7 +35,7 @@ jobs:
           ls
           ls ~/
           cp -r ./dist/* ./ginger-society.github.io/
-        working-directory: ./ginger-society.github.io
+        working-directory: ginger-society.github.io
 
       - name: Commit and push changes to ginger-society.github.io
         run: |

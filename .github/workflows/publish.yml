@@ -18,8 +18,25 @@ jobs:
           npm install
           npm run build  # Adjust this command based on your build script
 
-      - name: Publish to ginger-society.github.io
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Configure git
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+
+      - name: Clone ginger-society.github.io repository
+        uses: actions/checkout@v2
         with:
-          github_token: ${{ secrets.REPO_TOKEN }}
-          publish_dir: ./dist  # Adjust this to your build output directory
+          repository: ginger-society/ginger-society.github.io
+          token: ${{ secrets.REPO_TOKEN }} 
+
+      - name: Copy build to ginger-society.github.io
+        run: |
+          cp -r ./dist/* ./ginger-society.github.io/
+        working-directory: ./ginger-society-website
+
+      - name: Commit and push changes to ginger-society.github.io
+        run: |
+          cd ./ginger-society.github.io/
+          git add .
+          git commit -m "Update build"
+          git push origin main

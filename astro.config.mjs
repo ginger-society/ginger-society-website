@@ -4,6 +4,6 @@ import bookshop from '@bookshop/astro-bookshop';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://ginger-society.github.io/ginger-society-website/",
+  site: "https://ginger-society.github.io/",
   integrations: [bookshop(), react()]
 });

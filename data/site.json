@@ -1,0 +1,9 @@
+{
+  "site_title": "Ginger Society",
+  "description": "A polished, marketing website template built with Astro",
+  "favicon_icon": "/images/ginger_icon.ico",
+  "favicon_image": "/images/ginger_icon.png",
+  "twitter_site": "@twitter_site",
+  "image": "/images/feature/feature-hero.png",
+  "image_alt": "/images/feature/feature-hero.png"
+}

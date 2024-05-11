@@ -1,0 +1,45 @@
+{
+  "logo": "/images/ginger_icon.png",
+  "items": [
+    {
+      "text": "Home",
+      "link": "/",
+      "enable_dropdown": false,
+      "dropdown": []
+    },
+    {
+      "text": "Projects",
+      "link": "/features/",
+      "enable_dropdown": true,
+      "dropdown": [
+        {
+          "dropdown_text": "Ginger DJ",
+          "dropdown_link": "/products/ginger-dj"
+        },
+        {
+          "dropdown_text": "Ginger Book",
+          "dropdown_link": "/products/ginger-book"
+        },
+        {
+          "dropdown_text": "Ginger UI",
+          "dropdown_link": "/products/ginger-ui/"
+        },
+        {
+          "dropdown_text": "Ginger Code",
+          "dropdown_link": "/products/ginger-code/"
+        }
+      ]
+    },
+    {
+      "text": "Menifesto",
+      "link": "/menifesto/",
+      "enable_dropdown": false,
+      "dropdown": []
+    }
+  ],
+  "enable_nav_btn": true,
+  "nav_btn": {
+    "text": "Donate",
+    "link": "/contact/"
+  }
+}

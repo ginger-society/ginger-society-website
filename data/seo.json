@@ -1,0 +1,32 @@
+{
+	"site_name": "Ginger",
+	"site_title": "Ginger Society Official Website",
+	"description": "A polished, marketing website template built with Astro.",
+	"author": "",
+	"author_email": "",
+	"images": [
+		{
+			"image": "/images/_screenshot.png",
+			"description": "Screenshot for Ginger Society Template",
+			"height": 0,
+			"width": 0
+		}
+	],
+	"_structures": {
+		"images": {
+			"style": "select",
+			"values": [
+				{
+					"label": "Image",
+					"icon": "image",
+					"value": {
+						"image": "",
+						"description": "",
+						"height": 0,
+						"width": 0
+					}
+				}
+			]
+		}
+	}
+}

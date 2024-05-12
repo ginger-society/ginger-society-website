@@ -1,7 +1,7 @@
 ---
 title: Menifesto
 seo:
-  page_description:
+  page_description: Read out menifesto, key activities and working model.
   canonical_url:
   featured_image:
   featured_image_alt:

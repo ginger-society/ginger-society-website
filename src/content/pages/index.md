@@ -1,7 +1,7 @@
 ---
 title: Ginger DJ
 seo:
-  page_description:
+  page_description: Export how Ginger Society can help you build better software faster
   canonical_url:
   featured_image:
   featured_image_alt:

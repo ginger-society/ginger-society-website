@@ -1,7 +1,7 @@
 ---
 title: Templates
 seo:
-  page_description:
+  page_description: Ready to use project templates for creating Backend, Frontend and Libraries in Rust, JavaScript and Python
   canonical_url:
   featured_image:
   featured_image_alt:

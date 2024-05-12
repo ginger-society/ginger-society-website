@@ -39,7 +39,7 @@ content_blocks:
     reversed: true
 
   - _bookshop_name: global/feature
-    image: /images/feature/feature-hero.png
+    image: /images/ginger-ui.png
     image_alt: Message inbox
     title: GingerUI
     description: A UI library based on Uber's design language. minus styletron.

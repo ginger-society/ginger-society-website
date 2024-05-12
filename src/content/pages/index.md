@@ -1,5 +1,5 @@
 ---
-title: Ginger DJ
+title: Ginger Society
 seo:
   page_description: Export how Ginger Society can help you build better software faster
   canonical_url:

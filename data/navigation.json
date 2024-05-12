@@ -19,16 +19,14 @@
         {
           "dropdown_text": "Ginger Book",
           "dropdown_link": "/products/ginger-book"
-        },
-        {
-          "dropdown_text": "Ginger UI",
-          "dropdown_link": "/products/ginger-ui/"
-        },
-        {
-          "dropdown_text": "Ginger Code",
-          "dropdown_link": "/products/ginger-code/"
         }
       ]
+    },
+    {
+      "text": "Templates",
+      "link": "/templates/",
+      "enable_dropdown": false,
+      "dropdown": []
     },
     {
       "text": "Menifesto",

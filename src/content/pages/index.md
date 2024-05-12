@@ -1,6 +1,5 @@
 ---
-_schema: default
-title: Home
+title: Ginger DJ
 seo:
   page_description:
   canonical_url:
@@ -10,86 +9,45 @@ seo:
   open_graph_type:
   no_index: false
 content_blocks:
-  - _bookshop_name: home/hero
-    title: Just like Linux Foundation.
-    description: >-
-      A non profit organisation working to keep internet open and accessible.
-    image: /images/hero/hero-image-2.png
-    image_alt: Reports dashboard
+  - _bookshop_name: products/hero
+    title: Explore Innovation @ Ginger Society
+    description: Build better products with our range of products and dev tools.
     button:
-      text: Try This Free
-      link: /signup/
-  - _bookshop_name: home/video
-    image: /images/video/video-thum.jpg
-    image_alt: Thumbnail for video
-    video_url: https://vimeo.com/45830194
-  - _bookshop_name: global/header
-    title: "Ginger Society "
-    title_suffix: Features
-    remove_top_padding: true
-    description: >-
-      Our platform offers the most advanced features including automated email
-      content creation, dynamic personalization, and customer segmentation.
+      link: /contact
+      text: Know more
+    image: /images/innovations-at-ginger.png
+    image_alt: Charts
+  
   - _bookshop_name: global/feature
-    image: /images/feature/feature-card-one.png
+    image: /images/ginger-dj.png
     image_alt: Message inbox
-    title: Email Campaign in one minute
-    description: >-
-      Send an email campaign with one click, in just minutes. Automate your
-      emails and content, while keeping the human touch.
+    title: GingerDJ
+    description: Write complex business logic in clear and expressive ORM. Build clean microservices based on Django's world class framework design
     button:
-      link: /signup
-      text: Try This Free
+      link: /products/ginger-dj
+      text: Get started
     reversed: false
+
   - _bookshop_name: global/feature
-    image: /images/feature/feature-card-two.png
-    image_alt: Visitor chart
-    title: See every Lead in one Place
-    description: >-
-      Sales analytics and automation made simple: see every sales lead in one
-      place, regardless of where it came from.
+    image: /images/ginger-book.png
+    image_alt: Message inbox
+    title: GingerBook
+    description: Simplifying UI Component Development and Testing. Based on the principals of Storybook, but better.
     button:
-      link: /signup
-      text: Try This Free
+      link: /products/ginger-book
+      text: Know more
     reversed: true
+
   - _bookshop_name: global/feature
-    image: /images/feature/feature-card-three.png
-    image_alt: File upload
-    title: 100% free uploads
-    description: >-
-      Ginger Society is used by everyone from small businesses to fortune 500 companies.
-      Browse our collection of email marketing templates and start sending
-      beautiful emails in minutes.
-    button:
-      link: /signup
-      text: Try This Free
+    image: /images/feature/feature-hero.png
+    image_alt: Message inbox
+    title: GingerUI
+    description: A UI library based on Uber's design language. minus styletron.
     reversed: false
-  - _bookshop_name: global/testimonial
-    title: Build relationships that
-    title_suffix: last
-    description: >-
-      Customers from around the world are building game changing email marketing
-      campaigns.
-    slider:
-      - image: /images/testimonial/logo-2.jpg
-        image_alt: Profile photo of Pete Fish
-        author: Pete Fish
-        designation: CMO at Clear Appeal
-        message: >-
-          Ginger Society has taken Clear Appeal to the next level with it's beautiful
-          targetted email campaigns.
-      - image: /images/testimonial/logo-3.jpg
-        image_alt: Profile photo of Dolly Watson
-        author: Dolly Watson
-        designation: Digital Marketer at Time Cop
-        message: >-
-          Wow, what a difference Ginger Society has made. My customers are more engaged
-          than ever.
-      - image: /images/testimonial/logo-4.jpg
-        image_alt: Profile photo of Simon Moriarty
-        author: Simon Moriarty
-        designation: Head of Marketing at Pinnacle Mines
-        message: >-
-          I can't imagine life without Ginger Society now, I have no idea how we were
-          surviving before.
----
+
+  - _bookshop_name: global/feature
+    image: /images/ginger-code.png
+    image_alt: Message inbox
+    title: GingerCode
+    description: A container first Code editor based on Code-OSS ( VS Code ). No more "It works on my machine"
+    reversed: true

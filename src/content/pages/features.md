@@ -13,13 +13,13 @@ content_blocks:
     title: Explore Innovation @ Ginger Society
     description: Build better products with our range of products and dev tools.
     button:
-      link: /signup
+      link: /contact
       text: Know more
-    image: /images/feature/feature-hero.png
+    image: /images/innovations-at-ginger.png
     image_alt: Charts
   
   - _bookshop_name: global/feature
-    image: /images/feature/feature-card-one.png
+    image: /images/ginger-dj.png
     image_alt: Message inbox
     title: GingerDJ
     description: Write complex business logic in clear and expressive ORM. Build clean microservices based on Django's world class framework design
@@ -29,31 +29,25 @@ content_blocks:
     reversed: false
 
   - _bookshop_name: global/feature
-    image: /images/feature/feature-card-one.png
+    image: /images/ginger-book.png
     image_alt: Message inbox
     title: GingerBook
     description: Simplifying UI Component Development and Testing. Based on the principals of Storybook, but better.
     button:
-      link: /signup
-      text: Get started
+      link: /products/ginger-book
+      text: Know more
     reversed: true
 
   - _bookshop_name: global/feature
-    image: /images/feature/feature-card-one.png
+    image: /images/ginger-ui.png
     image_alt: Message inbox
     title: GingerUI
     description: A UI library based on Uber's design language. minus styletron.
-    button:
-      link: /signup
-      text: Get started
     reversed: false
 
   - _bookshop_name: global/feature
-    image: /images/feature/feature-card-one.png
+    image: /images/ginger-code.png
     image_alt: Message inbox
     title: GingerCode
     description: A container first Code editor based on Code-OSS ( VS Code ). No more "It works on my machine"
-    button:
-      link: /signup
-      text: Get started
-    reversed: false
+    reversed: true

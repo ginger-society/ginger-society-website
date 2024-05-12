@@ -39,6 +39,10 @@
         {
           "link": "/menifesto/",
           "text": "Menifesto"
+        },
+        {
+          "link": "/templates/",
+          "text": "Templates"
         }
       ]
     },

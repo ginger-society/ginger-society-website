@@ -21,7 +21,7 @@ content_blocks:
             <li><strong>Skills</strong>: Strong problem-solving skills, programming proficiency, and a passion for open-source technology.</li>
             <li><strong>Availability</strong>: Able to commit to a minimum of 40 hours per week for the internship.</li>
             <li><strong>Equipment</strong>: Must have a personal laptop.</li>
-            <li><strong>Workspace</strong>: Must have a comfortable workspace.</li>
+            <li><strong>Workspace</strong>: Should have a comfortable workspace.</li>
           </ul>
       - heading: Duration
         description: >-
@@ -42,9 +42,10 @@ content_blocks:
             <li><strong>Application Process</strong>:
               <ul>
                 <li>Interested candidates can apply by submitting a handwritten cover letter by either of their parents in English or their mother tongue. <small>If your parents can not read/write, you can ask your nearby postman or primary school teacher in your area to help you. ( They need to also mention their designation / phone number at the back of the cover letter )</small> </li>
-                <li>The cover letter should clearly mention the candidate's university name and personal contact details.</li>
+                <li>The cover letter should also mention the candidate's university name and personal contact details.</li>
                 <li>The cover letter should also cover the candidate's place of birth, their parents' experience with them as a school student, how they balanced family responsibilities and studies, and their parents' wishes for their future.</li>
                 <li>Applications are reviewed by our selection committee, and shortlisted candidates proceed to the evaluation phase.</li>
+                <li>Applications with project details, academic scores, prior internships experience and other unnecessary information will be <strong>rejected</strong>.</li>
               </ul>
             </li>
             <li><strong>Evaluation Phase</strong>:
@@ -75,7 +76,7 @@ content_blocks:
       - heading: How to Apply
         description: >-
           <ul>
-            <li><strong>For Individuals</strong>: Send your handwritten cover letter to <a href="mailto:hello@gingersociety.org">hello@gingersociety.org</a> </li>
+            <li><strong>For Graduates</strong>: Send your handwritten cover letter to <a href="mailto:hello@gingersociety.org">hello@gingersociety.org</a> </li>
             <li><strong>For Students in University</strong>: Reach out to your university's placement and training cell for more information about the Ginger Society Internship Program. Your placement and training cell can provide you with additional details about the program, application process, and deadlines.</li>
           </ul>
 ---

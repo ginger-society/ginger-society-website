@@ -15,6 +15,7 @@ export default function Footer({}) {
                   © Copyright <span>{new Date().getFullYear()}</span>{" "}
                   {footer.copyright}
                 </p>
+                
               </div>
               <div className="social-icon">
                 <ul className="list-unstyled">
@@ -47,6 +48,15 @@ export default function Footer({}) {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="flex">
+                <p className="text-white">Third Wave Coffee is a registered trademark of Heisetasse Beverages Private Limited</p>
+                <p className="text-white">Django a registered trademark of Django Software Foundation</p>
+                <p className="text-white">VSCode, TypeScript a registered trademark of Microsoft Corporation</p>
+                <p className="text-white">Storybook a registered trademark of Storybook/Chromatic</p>
+                <p className="text-white">Python a registered trademark of Python Software Foundation</p>
+                <p className="text-white">Rust a registered trademark of Rust Foundation</p>
+                <p className="text-white">Other names used on this website are registered trademark of their respective owner. If unknowingly we have missed anything, please write to us and we will fix it right away. </p>
           </div>
         </div>
       </div>

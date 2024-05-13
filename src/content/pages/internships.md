@@ -32,8 +32,8 @@ content_blocks:
       - heading: Compensation
         description: >-
           <ul>
-            <li><strong>Students</strong>: $100 USD per month</li>
-            <li><strong>Engineering Graduates</strong>: $200 USD per month</li>
+            <li><strong>Students</strong>: $100 per month</li>
+            <li><strong>Engineering Graduates</strong>: $200 per month</li>
           </ul>
 
       - heading: Internship Steps

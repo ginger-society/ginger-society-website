@@ -11,7 +11,7 @@ seo:
 content_blocks:
   - _bookshop_name: privacy/hero
     title: Internships @ Ginger Society
-    description: Welcome to the Ginger Society Internship Program, where we nurture talent and empower the next generation of engineers and innovators. Our internship program is designed for 3rd-year university students and graduates from all engineering streams who are passionate about technology and eager to gain hands-on experience in a dynamic environment.
+    description: Welcome to the Ginger Society Internship Program, where we nurture talent and empower the next generation of engineers and innovators. Our internship program is designed for 3rd-year university students and graduates from all engineering streams who are passionate about technology and eager to gain hands-on experience in a dynamic environment. This is a completely remote / nomadic internship.
   - _bookshop_name: privacy
     terms_and_conditions:
       - heading: Eligibility Criteria

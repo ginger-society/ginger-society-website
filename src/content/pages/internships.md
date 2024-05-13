@@ -56,7 +56,7 @@ content_blocks:
             </li>
             <li><strong>Final Selection</strong>:
               <ul>
-                <li>Finalists are selected based on their performance in the evaluation phase, academic background, relevant experience, and alignment with Ginger Society's values and goals.</li>
+                <li>Finalists are selected based on their performance in the evaluation phase and alignment with Ginger Society's values and goals.</li>
                 <li>Selected interns receive an offer letter outlining the internship duration, compensation, responsibilities, and expectations.</li>
               </ul>
             </li>

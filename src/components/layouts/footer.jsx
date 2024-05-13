@@ -56,7 +56,7 @@ export default function Footer({}) {
                 <p className="text-white">Storybook a registered trademark of Storybook/Chromatic</p>
                 <p className="text-white">Python a registered trademark of Python Software Foundation</p>
                 <p className="text-white">Rust a registered trademark of Rust Foundation</p>
-                <p className="text-white">Other names used on this website are registered trademark of their respective owner. If unknowingly we have missed anything, please write to us and we will fix it right away. </p>
+                <p className="text-white">Other names used on this website are registered trademarks of their respective owner. If unknowingly we have missed anything, please write to us and we will fix it right away. </p>
           </div>
         </div>
       </div>

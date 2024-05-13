@@ -4,23 +4,11 @@
   "copyright": "Ginger Society. All rights reserved.",
   "social": [
     {
-      "link": "https://www.facebook.com/mycompany",
-      "social_icon": "ph-facebook-logo"
-    },
-    {
-      "link": "https://www.instagram.com/mycompany",
-      "social_icon": "ph-instagram-logo"
-    },
-    {
-      "link": "https://www.twitter.com/mycompany",
-      "social_icon": "ph-twitter-logo"
-    },
-    {
-      "link": "https://www.github.com/mycompany",
+      "link": "https://github.com/ginger-society",
       "social_icon": "ph-github-logo"
     },
     {
-      "link": "https://www.youtube.com/mycompany",
+      "link": "https://www.youtube.com/@GingerSociety",
       "social_icon": "ph-youtube-logo"
     }
   ],
@@ -43,6 +31,10 @@
         {
           "link": "/templates/",
           "text": "Templates"
+        },
+        {
+          "link": "/internships/",
+          "text": "Internships"
         }
       ]
     },

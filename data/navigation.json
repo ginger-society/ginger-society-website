@@ -33,6 +33,12 @@
       "link": "/menifesto/",
       "enable_dropdown": false,
       "dropdown": []
+    },
+    {
+      "text": "Internships",
+      "link": "/internships/",
+      "enable_dropdown": false,
+      "dropdown": []
     }
   ],
   "enable_nav_btn": true,

@@ -100,12 +100,6 @@ export default function ContactForm(block) {
                         </div>
                       </>
                     )}
-                    <input
-                      type="text"
-                      name="_gotcha"
-                      style={{ display: "none" }}
-                    />
-
                     {block.form.submit_button && (
                       <div className="col-12">
                         <button

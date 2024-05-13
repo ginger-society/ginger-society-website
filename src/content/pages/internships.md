@@ -76,7 +76,7 @@ content_blocks:
       - heading: How to Apply
         description: >-
           <ul>
-            <li><strong>For Graduates</strong>: Send your cover letter to <a href="mailto:hello@gingersociety.org">hello@gingersociety.org</a> </li>
+            <li><strong>For Graduates</strong>: Send your cover letter's Scan / Photo to <a href="mailto:hello@gingersociety.org">hello@gingersociety.org</a> </li>
             <li><strong>For Students in University</strong>: Reach out to your university's placement and training cell for more information about the Ginger Society Internship Program. Your placement and training cell can provide you with additional details about the program, application process, and deadlines.</li>
           </ul>
 ---

@@ -52,7 +52,7 @@ export default function Footer({}) {
           <div className="flex">
                 <p className="text-white">Third Wave Coffee is a registered trademark of Heisetasse Beverages Private Limited</p>
                 <p className="text-white">Django a registered trademark of Django Software Foundation</p>
-                <p className="text-white">VSCode, TypeScript a registered trademark of Microsoft Corporation</p>
+                <p className="text-white">VSCode, TypeScript are registered trademark of Microsoft Corporation</p>
                 <p className="text-white">Storybook a registered trademark of Storybook/Chromatic</p>
                 <p className="text-white">Python a registered trademark of Python Software Foundation</p>
                 <p className="text-white">Rust a registered trademark of Rust Foundation</p>

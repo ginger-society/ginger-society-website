@@ -71,12 +71,12 @@ content_blocks:
             <li><strong>Career Development</strong>: Develop key skills, explore new technologies, and pave the way for future career opportunities.</li>
             <li><strong>Online Verifiable Certificate</strong>: Receive an online verifiable certificate valid for a lifetime upon successful completion of the internship.</li>
             <li><strong>Ginger Merchandise</strong>: Exclusive Ginger Society merchandise as a token of appreciation.</li>
-            <li><strong>Career Workspace Support</strong>: Interns without a comfortable workspace will be provided with Third Wave Coffee's Food and Beverages prepaid cards valid across all the cities where Third Wave Coffee is present.</li>
+            <li><strong>Workspace Support</strong>: Interns without a comfortable workspace will be provided with  <a href="https://www.thirdwavecoffeeroasters.com/" target="_blank">Third Wave Coffee's (TWC) </a> Food and Beverages prepaid cards valid across all the cities where TWC is present.</li>
           </ul>
       - heading: How to Apply
         description: >-
           <ul>
-            <li><strong>For Graduates</strong>: Send your handwritten cover letter to <a href="mailto:hello@gingersociety.org">hello@gingersociety.org</a> </li>
+            <li><strong>For Graduates</strong>: Send your cover letter to <a href="mailto:hello@gingersociety.org">hello@gingersociety.org</a> </li>
             <li><strong>For Students in University</strong>: Reach out to your university's placement and training cell for more information about the Ginger Society Internship Program. Your placement and training cell can provide you with additional details about the program, application process, and deadlines.</li>
           </ul>
 ---

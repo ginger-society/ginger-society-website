@@ -1,7 +1,7 @@
 ---
-title: Ginger DJ
+title: Projects
 seo:
-  page_description:
+  page_description: Explore open source projects at Ginger Society
   canonical_url:
   featured_image:
   featured_image_alt:

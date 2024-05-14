@@ -26,7 +26,7 @@ content_blocks:
       - heading: Duration
         description: >-
           <ul>
-            <li><strong>Students:</strong>:  3 months</li>
+            <li><strong>Students</strong>:  3 months</li>
             <li><strong>Engineering Graduates</strong>: 6-12 months</li>
           </ul>
       - heading: Compensation

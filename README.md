@@ -10,13 +10,7 @@ Ginger Society Home page repository.
 - Configurable navigation and footer
 - Multiple hero options
 - Configurable theme colors
-- Optimised for editing in [CloudCannon](https://cloudcannon.com/)
 - Live, visual editing powered by [Bookshop](https://github.com/CloudCannon/bookshop)
-
-## Setup
-
-1. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/)
-   or Astro locally).
 
 ## Develop
 
@@ -26,10 +20,6 @@ Ginger Society is built with [Astro](https://astro.build/).
 $ yarn
 $ yarn dev
 ```
-
-## Editing
-
-Ginger Society is set up for adding, updating and removing pages, components, posts, portfolio items, company details and footer elements in [CloudCannon](https://app.cloudcannon.com/).
 
 ### Posts
 

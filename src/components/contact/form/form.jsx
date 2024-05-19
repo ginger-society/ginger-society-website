@@ -75,8 +75,8 @@ export default function ContactForm(block) {
                           <input
                             type="email"
                             className="form-control mb-6"
-                            id="email"
-                            name="_replyto"
+                            id="email-address"
+                            name="email-address"
                             placeholder={block.form.email.placeholder}
                             required=""
                           />

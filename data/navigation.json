@@ -2,12 +2,6 @@
   "logo": "/images/ginger_icon.png",
   "items": [
     {
-      "text": "Home",
-      "link": "/",
-      "enable_dropdown": false,
-      "dropdown": []
-    },
-    {
       "text": "Projects",
       "link": "/features/",
       "enable_dropdown": true,

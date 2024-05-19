@@ -71,7 +71,7 @@ content_blocks:
             <li><strong>Career Development</strong>: Develop key skills, explore new technologies, and pave the way for future career opportunities.</li>
             <li><strong>Online Verifiable Certificate</strong>: Receive an online verifiable certificate valid for a lifetime upon successful completion of the internship.</li>
             <li><strong>Ginger Merchandise</strong>: Exclusive Ginger Society merchandise as a token of appreciation.</li>
-            <li><strong>Workspace Support</strong>: Interns without a comfortable workspace will be provided with  <a href="https://www.thirdwavecoffeeroasters.com/" target="_blank">Third Wave Coffee's (TWC) </a> Food and Beverages prepaid cards valid across all the cities where TWC is present.</li>
+            <li><strong>Workspace Support</strong>: Interns without a comfortable workspace will be provided with  <a href="https://cafe.thirdwavecoffee.in/" target="_blank">Third Wave Coffee's (TWC) </a> Food and Beverages prepaid cards valid across all the cities where TWC is present.</li>
           </ul>
       - heading: How to Apply
         description: >-

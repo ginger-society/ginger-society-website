@@ -29,6 +29,16 @@ content_blocks:
     reversed: false
 
   - _bookshop_name: global/feature
+    image: /images/ginger-js.png
+    image_alt: Message inbox
+    title: GingerJS
+    description: A full stack framework for ReactJS and Python
+    button:
+      link: /products/ginger-js
+      text: Know more
+    reversed: true
+
+  - _bookshop_name: global/feature
     image: /images/ginger-book.png
     image_alt: Message inbox
     title: GingerBook
@@ -36,18 +46,18 @@ content_blocks:
     button:
       link: /products/ginger-book
       text: Know more
-    reversed: true
+    reversed: false
 
   - _bookshop_name: global/feature
     image: /images/ginger-ui.png
     image_alt: Message inbox
     title: GingerUI
     description: A UI library based on Uber's design language. minus styletron.
-    reversed: false
+    reversed: true
 
   - _bookshop_name: global/feature
     image: /images/ginger-code.png
     image_alt: Message inbox
     title: GingerCode
     description: A container first Code editor based on Code-OSS ( VS Code ). No more "It works on my machine"
-    reversed: true
+    reversed: false

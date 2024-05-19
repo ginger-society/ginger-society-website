@@ -11,7 +11,7 @@ seo:
 content_blocks:
   - _bookshop_name: products/hero
     title: GingerJS
-    description: A fullstack framework for ReactJS and Python for server side scripting.
+    description: A fullstack framework for ReactJS with Python support for server side scripting.
     button:
       link: https://github.com/ginger-society/ginger-js
       text: View On Github

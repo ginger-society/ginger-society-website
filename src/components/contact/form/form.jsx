@@ -30,7 +30,7 @@ export default function ContactForm(block) {
             <div className="contact-form">
               {block.form && (
                 <>
-                  <form method="post">
+                  <form method="post" action="https://submit-form.com/YDhkBWJls">
                     <h3>{block.form.heading}</h3>
                     {block.form.fullname && (
                       <>

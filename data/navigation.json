@@ -33,6 +33,12 @@
       "dropdown": []
     },
     {
+      "text": "Docs",
+      "link": "https://docs.gingersociety.org",
+      "enable_dropdown": false,
+      "dropdown": []
+    },
+    {
       "text": "Internships",
       "link": "/internships/",
       "enable_dropdown": false,

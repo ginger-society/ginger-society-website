@@ -17,6 +17,10 @@
         {
           "dropdown_text": "Ginger JS",
           "dropdown_link": "/products/ginger-js"
+        },
+        {
+          "dropdown_text": "Ginger DB",
+          "dropdown_link": "/products/ginger-db"
         }
       ]
     },

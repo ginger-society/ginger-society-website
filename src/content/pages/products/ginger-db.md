@@ -21,7 +21,7 @@ content_blocks:
   - _bookshop_name: global/feature
     image: /images/ginger-db-studio-screenshot.png
     image_alt: Message inbox
-    title: An intutive
+    title: An intutive designer
     description: Use tables and enum blocks to design a robust DB structure with Many-To-Many, ForeignKey and One-To-One 
     button:
       link: https://db-studio.gingersociety.org

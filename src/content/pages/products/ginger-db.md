@@ -33,7 +33,7 @@ content_blocks:
     title: db-compose
     description: Once you have designed the schema in the studio , you can quickly run a postgres SQL server with the schema already applied
     button:
-      link: https://docs.gingersociety.org/docs/category/ginger-db
+      link: https://docs.gingersociety.org/docs/ginger-db
       text: Learn more
     reversed: false
   

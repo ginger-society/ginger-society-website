@@ -24,7 +24,7 @@ content_blocks:
     title: OpenAPI Spec
     description: Get swagger UI out of the box to test your API. Create custom request and response type with pre and post handler validation of the data.
     button:
-      link: https://docs.gingersociety.org/docs/category/ginger-dj
+      link: https://docs.gingersociety.org/docs/ginger-dj
       text: Know more
     reversed: false
 
@@ -34,7 +34,7 @@ content_blocks:
     title: Highly observable
     description: Get logs and metrics with built in prometheus metrics collection for endpoints and data models with declarative syntax
     button:
-      link: https://docs.gingersociety.org/docs/category/ginger-dj
+      link: https://docs.gingersociety.org/docs/ginger-dj
       text: Know more
     reversed: true
 
@@ -44,7 +44,7 @@ content_blocks:
     title: Expressive ORM
     description: Built upon Django's ORM which lets you design complex data models, Ensures SQL relations integrity and retrive data with efficient query engine.
     button:
-      link: https://docs.gingersociety.org/docs/category/ginger-dj
+      link: https://docs.gingersociety.org/docs/ginger-dj
       text: Know more
     reversed: false
 
@@ -54,6 +54,6 @@ content_blocks:
     title: Pluggable authentication
     description: Bring in your own authentication and authorization logic. Supports persisant contextual data across middlewares.
     button:
-      link: https://docs.gingersociety.org/docs/category/ginger-dj
+      link: https://docs.gingersociety.org/docs/ginger-dj
       text: Know more
     reversed: true

@@ -11,7 +11,7 @@ seo:
 content_blocks:
   - _bookshop_name: products/hero
     title: GingerDB
-    description: A UML designer for Relational Database
+    description: A UML designer and workflow CLI for Relational Database
     button:
       link: https://github.com/ginger-society/gingerDB-studio-FE
       text: View On Github
@@ -27,4 +27,13 @@ content_blocks:
       link: https://db-studio.gingersociety.org
       text: Try it, its free.
     reversed: true
+  - _bookshop_name: global/feature
+    image: /images/db-compose-commands.png
+    image_alt: Message inbox
+    title: db-compose
+    description: Once you have designed the schema in the studio , you can quickly run a postgres SQL server with the schema already applied
+    button:
+      link: https://docs.gingersociety.org/docs/category/ginger-db
+      text: Learn more
+    reversed: false
   

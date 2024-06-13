@@ -17,7 +17,7 @@ export default function GlobalFeature(block) {
           </div>
           <div className="col-lg-6">
             <div className="feature-item-content mb-xl-15 mb-md-10 mb-7 ps-xxl-8 ps-0">
-              {!block.button && <div style={{color: 'red'}}>Comming Soon</div>}
+              {!block.button && <div style={{color: 'red'}}>Coming Soon</div>}
               <h2>{block.title}  </h2>
               <div
                 dangerouslySetInnerHTML={{
@@ -43,7 +43,7 @@ export default function GlobalFeature(block) {
         <div className="row align-items-center">
           <div className="col-lg-6 order-2 order-lg-1">
             <div className="feature-item-content mb-xl-15 mb-md-10 mb-7 ps-xxl-8 ps-0">
-            {!block.button && <div style={{color: 'red'}}>Comming Soon</div>}
+            {!block.button && <div style={{color: 'red'}}>Coming Soon</div>}
               <h2 className="pe-xl-0">{block.title}</h2>
               <div
                 dangerouslySetInnerHTML={{

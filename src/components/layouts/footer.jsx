@@ -50,13 +50,15 @@ export default function Footer({}) {
             ))}
           </div>
           <div className="flex">
-                <p className="text-white">Third Wave Coffee is a registered trademark of Heisetasse Beverages Private Limited</p>
+                <p className="text-white">Third Wave Coffee is a registered trademark of Heisetasse Beverages Pvt Ltd</p>
                 <p className="text-white">Django is a registered trademark of Django Software Foundation</p>
-                <p className="text-white">VSCode, TypeScript are registered trademark of Microsoft Corporation</p>
+                <p className="text-white">VSCode, TypeScript, NPM are registered trademark of Microsoft Corp</p>
                 <p className="text-white">Storybook is a registered trademark of Storybook/Chromatic</p>
                 <p className="text-white">Python is a registered trademark of Python Software Foundation</p>
                 <p className="text-white">Rust is a registered trademark of Rust Foundation</p>
                 <p className="text-white">Uber is a registered trademark of Uber Inc</p>
+                <p className="text-white">Docker is a registered trademark of Docker Inc</p>
+                <p className="text-white">Homebrew is a registered trademark of Max Howell</p>
                 <p className="text-white">Other names used on this website are registered trademarks of their respective owner. If unknowingly we have missed anything, please write to us and we will fix it right away. </p>
           </div>
         </div>

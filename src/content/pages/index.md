@@ -65,6 +65,9 @@ content_blocks:
     title: GingerUI
     description: A UI library based on Uber's design language. minus styletron.
     reversed: false
+    button:
+      link: /products/ginger-ui
+      text: Know more
 
   - _bookshop_name: global/feature
     image: /images/ginger-code.png

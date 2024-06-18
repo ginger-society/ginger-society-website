@@ -15,6 +15,10 @@
           "dropdown_link": "/products/ginger-book"
         },
         {
+          "dropdown_text": "Ginger UI",
+          "dropdown_link": "/products/ginger-ui"
+        },
+        {
           "dropdown_text": "Ginger JS",
           "dropdown_link": "/products/ginger-js"
         },

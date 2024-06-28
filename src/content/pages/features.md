@@ -92,7 +92,7 @@ content_blocks:
     image: /images/ginger-connector.png
     image_alt: Message inbox
     title: GingerConnector
-    description: Manages service dependencies in Microserice / Full Stack projects
+    description: Manages service dependencies in Microservice / Full Stack projects
     reversed: true
     button:
       link: /products/ginger-connector

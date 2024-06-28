@@ -11,7 +11,7 @@ seo:
 content_blocks:
   - _bookshop_name: products/hero
     title: GingerConnector
-    description: Manages service dependencies in Microserice / Full Stack projects
+    description: Manages service dependencies in Microservice / Full Stack projects
     button:
       link: https://docs.gingersociety.org/docs/ginger-connector/
       text: Get started

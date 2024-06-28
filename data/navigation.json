@@ -25,6 +25,18 @@
         {
           "dropdown_text": "Ginger DB",
           "dropdown_link": "/products/ginger-db"
+        },
+        {
+          "dropdown_text": "Ginger Scaffolder",
+          "dropdown_link": "/products/ginger-scaffolder"
+        },
+        {
+          "dropdown_text": "Ginger Releaser",
+          "dropdown_link": "/products/ginger-releaser"
+        },
+        {
+          "dropdown_text": "Ginger Connector",
+          "dropdown_link": "/products/ginger-connector"
         }
       ]
     },

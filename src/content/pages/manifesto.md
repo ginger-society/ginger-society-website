@@ -1,7 +1,7 @@
 ---
-title: Menifesto
+title: Manifesto
 seo:
-  page_description: Read out menifesto, key activities and working model.
+  page_description: Read out manifesto, key activities and working model.
   canonical_url:
   featured_image:
   featured_image_alt:
@@ -10,7 +10,7 @@ seo:
   no_index: false
 content_blocks:
   - _bookshop_name: privacy/hero
-    title: Menifesto
+    title: Manifesto
     description: Empowering developers and safeguarding open-source software for a thriving and inclusive digital ecosystem.
   - _bookshop_name: privacy
     terms_and_conditions:

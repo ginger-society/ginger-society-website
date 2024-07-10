@@ -24,7 +24,7 @@ content_blocks:
     title: An intutive designer
     description: Use tables and enum blocks to design a robust DB structure with Many-To-Many, ForeignKey and One-To-One 
     button:
-      link: https://db-studio.gingersociety.org
+      link: https://db-designer.gingersociety.org
       text: Try it, its free.
     reversed: true
   - _bookshop_name: global/feature

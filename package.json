@@ -19,7 +19,8 @@
     "markdown-it": "^13.0.1",
     "sass": "^1.56.1"
   },
-  "name": "@example/basics",
+  "name": "@ginger-society/homepage",
+  "description": "gingersociety.org homepage written in astro framework",
   "private": true,
   "scripts": {
     "astro": "astro",

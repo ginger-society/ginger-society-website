@@ -17,6 +17,9 @@ content_blocks:
       text: Know more
     image: /images/innovations-at-ginger.png
     image_alt: Charts
+
+  - _bookshop_name: products/installation-info
+    title: Explore Innovation @ Ginger Society
   
   - _bookshop_name: global/feature
     image: /images/ginger-dj.png

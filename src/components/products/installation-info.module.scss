@@ -1,0 +1,62 @@
+.container {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  padding: 20px;
+  align-items: center;
+  min-height: 200px;
+}
+
+.command {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  border: solid 0.5px white;
+  padding: 20px;
+  border-radius: 20px;
+  white-space: nowrap; /* Keeps the text in a single line */
+  overflow: hidden; /* Ensures text doesn't overflow while typing */
+}
+
+.dollarSign {
+  color: #e53b2a;
+}
+
+.copyButton {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.typedCommand {
+  display: inline-block;
+  border-right: 2px solid white; /* Simulates the caret */
+  width: 100%;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden; /* Ensures only the typed part is visible */
+}

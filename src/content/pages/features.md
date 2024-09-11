@@ -1,7 +1,7 @@
 ---
 title: Projects
 seo:
-  page_description: Explore open source projects at Ginger Society
+  page_description: Learn more about Dev portal by Ginger Society
   canonical_url:
   featured_image:
   featured_image_alt:
@@ -10,97 +10,51 @@ seo:
   no_index: false
 content_blocks:
   - _bookshop_name: products/hero
-    title: Explore Innovation @ Ginger Society
-    description: Build better products with our range of products and dev tools.
+    title: Dev Portal by Ginger Society
+    description: Visualize your tech like never before by just adding metadata through our CLI tools in your projects.
     button:
-      link: /contact
-      text: Know more
-    image: /images/innovations-at-ginger.png
+      link: https://iam-staging.gingersociety.org/#dev-portal-staging/login
+      text: Sing in / Sign up
+    image: /images/dev-portal-on-mac.png
     image_alt: Charts
   
   - _bookshop_name: global/feature
-    image: /images/ginger-dj.png
+    image: /images/db-designer-transparent.png
     image_alt: Message inbox
-    title: GingerDJ
-    description: Write complex business logic in clear and expressive ORM. Build clean microservices based on Django's world class framework design
+    title: DB Designer
+    description: Create complex DB table relationships and generate ORM models for Python / Typescript and Rust
     button:
-      link: /products/ginger-dj
+      link: https://iam-staging.gingersociety.org/#dev-portal-staging/login
       text: Get started
     reversed: false
 
   - _bookshop_name: global/feature
-    image: /images/ginger-js.png
-    image_alt: Message inbox
-    title: GingerJS
-    description: A full stack framework for ReactJS and Python
-    button:
-      link: /products/ginger-js
-      text: Know more
-    reversed: true
-
-  - _bookshop_name: global/feature
     image: /images/ginger-db.png
     image_alt: Message inbox
-    title: GingerDB
-    description: UML designer for Relational Database.
+    title: DB Studio
+    description: Browse your DB with full CRUD operation just like Django Admin
     button:
-      link: /products/ginger-db
-      text: Know more
-    reversed: false
+      link: https://iam-staging.gingersociety.org/#dev-portal-staging/login
+      text: Get started
+    reversed: true
 
   - _bookshop_name: global/feature
     image: /images/ginger-book.png
     image_alt: Message inbox
-    title: GingerBook
-    description: Simplifying UI Component Development and Testing. Based on the principals of Storybook, but better.
+    title: Enity Relations
+    description: Understand your microservice dependency , its dependencies and where its used and DBs it uses down to which tables it uses.
     button:
-      link: /products/ginger-book
-      text: Know more
-    reversed: true
+      link: https://iam-staging.gingersociety.org/#dev-portal-staging/login
+      text: Get started
+    reversed: false
 
   - _bookshop_name: global/feature
     image: /images/ginger-ui.png
     image_alt: Message inbox
-    title: GingerUI
-    description: A UI library based on Uber's design language. minus styletron.
-    reversed: false
+    title: Public System Design view
+    description: A bonus for open source platforms - Now display your system design with publically viewable portal
+    reversed: true
     button:
-      link: /products/ginger-ui
-      text: Know more
+      link: https://iam-staging.gingersociety.org/#dev-portal-staging/login
+      text: View Ginger Society's System Design
   
-  - _bookshop_name: global/feature
-    image: /images/ginger-scaffolder.png
-    image_alt: Message inbox
-    title: GingerScaffolder
-    description: Project scaffolding tool
-    reversed: true
-    button:
-      link: /products/ginger-scaffolder
-      text: Know more
-
-  - _bookshop_name: global/feature
-    image: /images/ginger-releaser.png
-    image_alt: Message inbox
-    title: GingerReleaser
-    description: Versioning, Changelog and release management CLI tool
-    reversed: false
-    button:
-      link: /products/ginger-releaser
-      text: Know more
-
-  - _bookshop_name: global/feature
-    image: /images/ginger-connector.png
-    image_alt: Message inbox
-    title: GingerConnector
-    description: Manages service dependencies in Microservice / Full Stack projects
-    reversed: true
-    button:
-      link: /products/ginger-connector
-      text: Know more
-
-  - _bookshop_name: global/feature
-    image: /images/ginger-code.png
-    image_alt: Message inbox
-    title: GingerCode
-    description: A container first Code editor based on Code-OSS ( VS Code ). No more "It works on my machine"
-    reversed: false

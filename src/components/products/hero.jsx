@@ -14,7 +14,7 @@ export default function FeatureHero(block) {
                   __html: md.render(block.description),
                 }}
               />
-              <div className="d-block mb-6">
+              <div className="mb-6" style={{ display: 'flex', gap: '20px' }}>
                 {block.button && (
                   <a
                     href={block.button.link}
@@ -22,6 +22,15 @@ export default function FeatureHero(block) {
                   >
                     {" "}
                     {block.button.text}{" "}
+                  </a>
+                )}
+                {block.secondaryButton && (
+                  <a
+                    href={block.secondaryButton.link}
+                    className="btn btn-lg btn-links"
+                  >
+                    {" "}
+                    {block.secondaryButton.text}{" "}
                   </a>
                 )}
               </div>

@@ -3,7 +3,7 @@
   "items": [
     {
       "text": "Projects",
-      "link": "/features/",
+      "link": "#",
       "enable_dropdown": true,
       "dropdown": [
         {
@@ -17,10 +17,6 @@
         {
           "dropdown_text": "Ginger UI",
           "dropdown_link": "/products/ginger-ui"
-        },
-        {
-          "dropdown_text": "Ginger JS",
-          "dropdown_link": "/products/ginger-js"
         },
         {
           "dropdown_text": "Ginger DB",

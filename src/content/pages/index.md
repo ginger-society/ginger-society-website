@@ -13,14 +13,15 @@ content_blocks:
     title: Explore Innovation @ Ginger Society
     description: Build better products with our range of products and dev tools.
     button:
-      link: /contact
+      link: https://dev-portal-staging.gingersociety.org/#/public/ginger-society/stage
+      text: Demo
+    secondaryButton:
+      link: /features
       text: Know more
     image: /images/innovations-at-ginger.png
     image_alt: Charts
 
   - _bookshop_name: products/installation-info
-    title: Explore Innovation @ Ginger Society
-  
   - _bookshop_name: global/feature
     image: /images/ginger-dj.png
     image_alt: Message inbox

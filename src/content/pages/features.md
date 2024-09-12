@@ -29,9 +29,9 @@ content_blocks:
     reversed: false
 
   - _bookshop_name: global/feature
-    image: /images/ginger-db.png
+    image: /images/ginger-dj-admin-list-view.png
     image_alt: Message inbox
-    title: DB Studio
+    title: SQL DB Studio
     description: Browse your DB with full CRUD operation just like Django Admin
     button:
       link: https://iam-staging.gingersociety.org/#dev-portal-staging/login
@@ -39,22 +39,32 @@ content_blocks:
     reversed: true
 
   - _bookshop_name: global/feature
-    image: /images/ginger-book.png
+    image: /images/mongo-db-ui.png
     image_alt: Message inbox
-    title: Enity Relations
-    description: Understand your microservice dependency , its dependencies and where its used and DBs it uses down to which tables it uses.
+    title: DocumentDB Studio
+    description: Browse your MongoDB with full CRUD operation
     button:
       link: https://iam-staging.gingersociety.org/#dev-portal-staging/login
       text: Get started
     reversed: false
 
   - _bookshop_name: global/feature
-    image: /images/ginger-ui.png
+    image: /images/entity-relations.png
     image_alt: Message inbox
-    title: Public System Design view
-    description: A bonus for open source platforms - Now display your system design with publically viewable portal
-    reversed: true
+    title: Enity Relations
+    description: Understand your microservice dependency , its dependencies and where its used and DBs it uses down to which tables it uses.
     button:
       link: https://iam-staging.gingersociety.org/#dev-portal-staging/login
+      text: Get started
+    reversed: true
+
+  - _bookshop_name: global/feature
+    image: /images/public-ui.png
+    image_alt: Message inbox
+    title: Public System Design view
+    description: A bonus for open source platforms - Now display your system design publically for free
+    reversed: false
+    button:
+      link: https://dev-portal-staging.gingersociety.org/#/public/ginger-society/stage
       text: View Ginger Society's System Design
   

@@ -33,16 +33,6 @@ content_blocks:
     reversed: false
 
   - _bookshop_name: global/feature
-    image: /images/ginger-js.png
-    image_alt: Message inbox
-    title: GingerJS
-    description: A full stack framework for ReactJS and Python
-    button:
-      link: /products/ginger-js
-      text: Know more
-    reversed: true
-
-  - _bookshop_name: global/feature
     image: /images/ginger-book.png
     image_alt: Message inbox
     title: GingerBook
@@ -50,7 +40,7 @@ content_blocks:
     button:
       link: /products/ginger-book
       text: Know more
-    reversed: false
+    reversed: true
 
   - _bookshop_name: global/feature
     image: /images/ginger-db.png
@@ -60,7 +50,7 @@ content_blocks:
     button:
       link: /products/ginger-db
       text: Know more
-    reversed: true
+    reversed: false
 
 
   - _bookshop_name: global/feature
@@ -68,7 +58,7 @@ content_blocks:
     image_alt: Message inbox
     title: GingerUI
     description: A UI library based on Uber's design language. minus styletron.
-    reversed: false
+    reversed: true
     button:
       link: /products/ginger-ui
       text: Know more
@@ -78,7 +68,7 @@ content_blocks:
     image_alt: Message inbox
     title: GingerScaffolder
     description: Project scaffolding tool
-    reversed: true
+    reversed: false
     button:
       link: /products/ginger-scaffolder
       text: Know more
@@ -88,7 +78,7 @@ content_blocks:
     image_alt: Message inbox
     title: GingerReleaser
     description: Versioning, Changelog and release management CLI tool
-    reversed: false
+    reversed: true
     button:
       link: /products/ginger-releaser
       text: Know more
@@ -98,7 +88,7 @@ content_blocks:
     image_alt: Message inbox
     title: GingerConnector
     description: Manages service dependencies in Microservice / Full Stack projects
-    reversed: true
+    reversed: false
     button:
       link: /products/ginger-connector
       text: Know more
@@ -109,4 +99,4 @@ content_blocks:
     image_alt: Message inbox
     title: GingerCode
     description: A container first Code editor based on Code-OSS ( VS Code ). No more "It works on my machine"
-    reversed: false
+    reversed: true

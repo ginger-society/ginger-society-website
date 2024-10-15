@@ -1,12 +1,13 @@
 ---
-const handleEffect = () => {
-  console.log("ok");
-};
 
-// Attach the script to run after the component mounts
-setTimeout(() => handleEffect(), 0);
 ---
 
 <h1>Testing Hydration in Astro</h1>
-
 <span>OK</span>
+
+<script>
+  const handleEffect = () => {
+    console.log("ok");
+  };
+  handleEffect();
+</script>

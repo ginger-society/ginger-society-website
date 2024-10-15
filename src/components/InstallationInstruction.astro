@@ -1,0 +1,81 @@
+---
+const commandText = `bash -c "$(curl -fsSL https://raw.githubusercontent.com/ginger-society/infra-as-code-repo/main/rust-helpers/install-all-clis.sh)"`;
+---
+
+<style>
+  .container {
+    background: #cc4500;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    padding: 20px;
+    align-items: center;
+    min-height: 200px;
+  }
+
+  .command {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    border: solid 0.5px white;
+    padding: 20px;
+    border-radius: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .dollarSign {
+    color: #e53b2a;
+  }
+
+  .copyButton {
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  /* Typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+
+  .typedCommand {
+    display: inline-block;
+    border-right: 2px solid white; /* Simulates the caret */
+    width: 100%;
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret 0.75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden; /* Ensures only the typed part is visible */
+  }
+</style>
+
+<div class="container">
+  <span>
+    Get started by installing our dev tools. Copy the command below and paste it
+    in your terminal (use sudo mode if needed).
+  </span>
+  <span class="command">
+    <span class="dollarSign">$</span>
+    <span class="typedCommand">{commandText}</span>
+  </span>
+</div>

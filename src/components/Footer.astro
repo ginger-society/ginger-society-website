@@ -1,0 +1,184 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<style>
+  .footer {
+    padding: 5rem 0;
+    background-color: black;
+    color: white;
+  }
+
+  .footer-logo img {
+    max-width: 150px;
+  }
+
+  .footer-logo {
+    margin-bottom: 1rem;
+  }
+
+  .footer-logo p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .social-icon a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+  .social-icon {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-widget {
+    text-align: right;
+  }
+
+  .footer-widget h3 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .footer-widget ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-widget ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-widget ul li a {
+    text-decoration: none;
+    color: #f85907;
+    font-size: 14px;
+  }
+
+  .footer-widget ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .disclaimer {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .col {
+    flex: 1;
+  }
+
+  .footer .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+</style>
+
+<footer class="footer" id="footer">
+  <div class="container-fluid">
+    <div class="footer-content">
+      <!-- Left Section: Logo and Social Links -->
+      <div class="col">
+        <div class="footer-logo">
+          <a href="/">
+            <img
+              src="https://gingersociety.org/images/ginger_icon.png"
+              alt="logo"
+            />
+          </a>
+          <p>© Copyright {currentYear} Ginger Society. All rights reserved.</p>
+        </div>
+
+        <div class="social-icon">
+          <a href="https://github.com/ginger-society"> GitHub </a>
+          <a href="https://www.youtube.com/@GingerSociety"> YouTube </a>
+        </div>
+      </div>
+
+      <!-- Middle Section: Main Pages -->
+      <div class="col">
+        <div class="footer-widget">
+          <h3>Main Pages</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/features/">Projects</a></li>
+            <li><a href="/manifesto/">Manifesto</a></li>
+            <li><a href="/templates/">Templates</a></li>
+            <li><a href="https://docs.gingersociety.org">Docs</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Section: Organization Links -->
+      <div class="col">
+        <div class="footer-widget">
+          <h3>Organization</h3>
+          <ul>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/internships/">Internships</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disclaimer Section -->
+    <div class="flex">
+      <span class="disclaimer"
+        >Third Wave Coffee is a registered trademark of Heisetasse Beverages Pvt
+        Ltd</span
+      >
+      <span class="disclaimer"
+        >Django is a registered trademark of Django Software Foundation</span
+      >
+      <span class="disclaimer"
+        >VSCode, TypeScript, NPM are registered trademarks of Microsoft Corp</span
+      >
+      <span class="disclaimer"
+        >Storybook is a registered trademark of Storybook/Chromatic</span
+      >
+      <span class="disclaimer"
+        >Python is a registered trademark of Python Software Foundation</span
+      >
+      <span class="disclaimer"
+        >Rust is a registered trademark of Rust Foundation</span
+      >
+      <span class="disclaimer"
+        >Uber / Baseweb is a registered trademark of Uber Inc</span
+      >
+      <span class="disclaimer"
+        >Docker is a registered trademark of Docker Inc</span
+      >
+      <span class="disclaimer"
+        >Homebrew is a registered trademark of Max Howell</span
+      >
+      <span class="disclaimer">
+        Other names used on this website are registered trademarks of their
+        respective owners. If unknowingly we have missed anything, please write
+        to us and we will fix it right away.
+      </span>
+    </div>
+  </div>
+</footer>

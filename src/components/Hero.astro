@@ -52,6 +52,20 @@ const shapeImage = "https://gingersociety.org/images/feature/effect-4.png";
     top: 0;
     right: 0;
   }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column; /* Stack elements vertically on mobile */
+      align-items: center; /* Center items */
+    }
+    .col-lg-6 {
+      flex: 1 1 100%; /* Full width on mobile */
+    }
+    .feature-hero-banner {
+      margin-top: 20px; /* Add some space above the image on mobile */
+    }
+  }
 </style>
 
 <div class="container">

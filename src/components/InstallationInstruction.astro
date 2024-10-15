@@ -67,7 +67,50 @@ const commandText = `bash -c "$(curl -fsSL https://raw.githubusercontent.com/gin
     white-space: nowrap;
     overflow: hidden; /* Ensures only the typed part is visible */
   }
+
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .typedCommand {
+      /* Truncate command text for mobile */
+      width: auto; /* Allow it to fit content */
+      animation: none; /* Disable typing animation on mobile */
+    }
+  }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const commandText = `bash -c "$(curl -fsSL https://raw.githubusercontent.com/ginger-society/infra-as-code-repo/main/rust-helpers/install-all-clis.sh)"`;
+
+    // Function to truncate the command text for mobile
+    function truncateCommand(command) {
+      const maxLength = 40; // Maximum length to show for the command
+      if (command.length > maxLength) {
+        const start = command.slice(0, 20); // First 10 characters
+        const end = command.slice(-20); // Last 10 characters
+        return `${start}...${end}`; // Combine with ellipsis
+      }
+      return command; // Return original if it's within limit
+    }
+
+    const commandElement = document.querySelector(".typedCommand");
+    const isMobile = window.innerWidth <= 768; // Check if screen width is mobile
+
+    // Set the command text based on the screen size
+    commandElement.innerText = isMobile
+      ? truncateCommand(commandText)
+      : commandText;
+
+    window.addEventListener("resize", function () {
+      const isMobile = window.innerWidth <= 768; // Check if screen width is mobile
+
+      // Update command text on resize
+      commandElement.innerText = isMobile
+        ? truncateCommand(commandText)
+        : commandText;
+    });
+  });
+</script>
 
 <div class="container">
   <span>
@@ -76,6 +119,6 @@ const commandText = `bash -c "$(curl -fsSL https://raw.githubusercontent.com/gin
   </span>
   <span class="command">
     <span class="dollarSign">$</span>
-    <span class="typedCommand">{commandText}</span>
+    <span class="typedCommand"></span>
   </span>
 </div>

@@ -1,5 +1,5 @@
 ---
-const commandText = `bash -c "$(curl -fsSL https://raw.githubusercontent.com/ginger-society/infra-as-code-repo/main/rust-helpers/install-all-clis.sh)"`;
+
 ---
 
 <style>
@@ -83,7 +83,7 @@ const commandText = `bash -c "$(curl -fsSL https://raw.githubusercontent.com/gin
     const commandText = `bash -c "$(curl -fsSL https://raw.githubusercontent.com/ginger-society/infra-as-code-repo/main/rust-helpers/install-all-clis.sh)"`;
 
     // Function to truncate the command text for mobile
-    function truncateCommand(command) {
+    function truncateCommand(command: string) {
       const maxLength = 40; // Maximum length to show for the command
       if (command.length > maxLength) {
         const start = command.slice(0, 20); // First 10 characters
@@ -93,7 +93,9 @@ const commandText = `bash -c "$(curl -fsSL https://raw.githubusercontent.com/gin
       return command; // Return original if it's within limit
     }
 
-    const commandElement = document.querySelector(".typedCommand");
+    const commandElement = document.querySelector(
+      ".typedCommand"
+    ) as HTMLSpanElement;
     const isMobile = window.innerWidth <= 768; // Check if screen width is mobile
 
     // Set the command text based on the screen size

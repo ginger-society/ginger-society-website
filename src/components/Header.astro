@@ -24,7 +24,7 @@ const navLinks = [
     const navbarToggle = document.querySelector(".navbar-toggle");
     
     // Toggle mobile menu on click
-    navbarToggle?.addEventListener("click", function () {
+    navbarToggle?.addEventListener("click", function (this: HTMLDivElement) {
       const navLinks = document.querySelector("ul.nav-links");
       this.classList.toggle("active");
       if (navLinks) {
@@ -44,8 +44,11 @@ const navLinks = [
     }
 
     // Collapse submenu when clicking outside of it
-    document.addEventListener("click", function (e) {
-      const isClickInside = projectLink.contains(e.target) || projectsLinks.contains(e.target);
+    document.addEventListener("click", function ({target}) {
+        if (!projectLink || !projectsLinks || !target)  {
+            return;
+        }
+      const isClickInside = projectLink.contains(target as Node) || projectsLinks.contains(target as Node);
       if (!isClickInside && projectsLinks.classList.contains("expanded")) {
         projectsLinks.classList.remove("expanded");
       }

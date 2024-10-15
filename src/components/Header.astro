@@ -2,7 +2,6 @@
 const navLinks = [
   {
     label: "Projects",
-    dropdown: true,
     links: [
       { label: "Ginger DJ", href: "/products/ginger-dj" },
       { label: "Ginger Book", href: "/products/ginger-book" },
@@ -20,7 +19,42 @@ const navLinks = [
 ];
 ---
 
+<script>
+  if (typeof window !== "undefined") {
+    const navbarToggle = document.querySelector(".navbar-toggle");
+    
+    // Toggle mobile menu on click
+    navbarToggle?.addEventListener("click", function () {
+      const navLinks = document.querySelector("ul.nav-links");
+      this.classList.toggle("active");
+      if (navLinks) {
+        navLinks.classList.toggle("open");
+      }
+    });
+
+    // Expand "Projects" section on mobile
+    const projectLink = document.querySelector(".projects-link");
+    const projectsLinks = document.querySelector(".projects-links");
+
+    if (projectLink && projectsLinks) {
+      projectLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        projectsLinks.classList.toggle("expanded");
+      });
+    }
+
+    // Collapse submenu when clicking outside of it
+    document.addEventListener("click", function (e) {
+      const isClickInside = projectLink.contains(e.target) || projectsLinks.contains(e.target);
+      if (!isClickInside && projectsLinks.classList.contains("expanded")) {
+        projectsLinks.classList.remove("expanded");
+      }
+    });
+  }
+</script>
+
 <style>
+  /* Navbar container */
   nav {
     display: flex;
     justify-content: space-between;
@@ -28,66 +62,139 @@ const navLinks = [
     padding: 10px 20px;
     background-color: black;
   }
+
+  /* Brand styling */
   .navbar-brand {
     display: flex;
     align-items: center;
     color: white;
+    min-width: 220px;
   }
+
   .navbar-brand img {
     margin-right: 10px;
   }
+
+  /* Hamburger menu */
   .navbar-toggle {
-    display: none;
+    display: block;
+    background-color: #f85907;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
   }
-  ul {
+
+  .navbar-toggle.active {
+    background-color: #f85907;
+  }
+
+  .navbar-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 3.2px;
+    background-color: white;
+  }
+
+  /* Mobile dropdown menu styling */
+  ul.nav-links {
     list-style: none;
-    display: flex;
+    display: none;
+    flex-direction: column;
     gap: 20px;
     margin: 0;
-    padding: 0;
-  }
-  ul.dropdown-menu {
-    display: none;
-    position: absolute;
+    padding: 20px;
     background-color: black;
-    padding: 10px;
-    width: 200px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
   }
+
+  ul.nav-links.open {
+    display: flex;
+  }
+
+  /* Expanded Projects section on mobile */
+  ul.projects-links {
+    display: none;
+    padding-left: 0px;
+    background-color: #3d3d3d; /* Slightly grey background */
+    list-style: none;
+    position: absolute;
+    margin-top: 30px
+  }
+
+  ul.projects-links li{
+    padding: 15px 20px 15px 20px;
+  }
+  ul.projects-links li:hover{
+    background: black;
+    cursor: pointer;
+  }
+
+  ul.projects-links.expanded {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+
+    ul.projects-links {
+        position: relative;
+    }
+
+    ul.nav-links {
+      height: fit-content;
+    }
+
+
+  }
+
+  /* For desktop view */
+  @media (min-width: 768px) {
+    ul.nav-links {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      background-color: transparent;
+      height: auto;
+    }
+
+    .navbar-toggle {
+      display: none;
+    }
+  }
+
+  .nav-link {
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Dropdown items */
   ul.dropdown-menu > li {
     padding: 10px;
   }
+
   .dropdown-item {
     color: white;
   }
-  .nav-link {
-    color: white;
-  }
-  ul.dropdown-menu > li :hover > a {
-    color: #f85907 !important;
-  }
-  li:hover > ul {
-    display: block;
-  }
-  li {
-    position: relative;
-  }
-  a {
-    text-decoration: none;
-  }
-  .buttons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
+
   .btn {
     padding: 5px 10px;
     background-color: #f85907;
     color: white;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
   }
-  .btn-links {
-    background-color: transparent;
-    border: #f85907;
+  .buttons{
+    display: flex;
+    gap: 15px;
+  }
+  a{
+    text-decoration: none;
   }
 </style>
 
@@ -101,35 +208,43 @@ const navLinks = [
     Ginger Society
   </a>
 
-  <ul>
-    {
-      navLinks.map((link) =>
-        link.dropdown ? (
-          <li>
-            <a href="#" class="nav-link">
-              {link.label}
-            </a>
-            <ul class="dropdown-menu">
-              {link.links.map((subLink) => (
-                <li>
-                  <a class="dropdown-item" href={subLink.href}>
-                    {subLink.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </li>
-        ) : (
-          <li>
-            <a href={link.href} class="nav-link">
-              {link.label}
-            </a>
-          </li>
-        )
+  <!-- Hamburger menu for mobile -->
+  <div class="navbar-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Nav links -->
+  <ul class="nav-links">
+    {navLinks.map((link) =>
+      link.links ? (
+        <li>
+          <a href="#" class="projects-link nav-link">
+            {link.label}
+          </a>
+          <!-- Submenu for Projects -->
+          <ul class="projects-links">
+            {link.links.map((subLink) => (
+              <li>
+                <a class="dropdown-item" href={subLink.href}>
+                  {subLink.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ) : (
+        <li>
+          <a href={link.href} class="nav-link">
+            {link.label}
+          </a>
+        </li>
       )
-    }
+    )}
   </ul>
 
+  <!-- Buttons (like Donate and GitHub) -->
   <div class="buttons">
     <a href="/contact/" class="btn btn-links">Donate</a>
     <a href="https://github.com/ginger-society" class="btn">

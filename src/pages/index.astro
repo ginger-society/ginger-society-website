@@ -78,6 +78,22 @@ const productCards = [
 ];
 ---
 
+<style>
+  @media (min-width: 768px) {
+    .sponsorship-container {
+      padding-left: 200px;
+      padding-right: 200px;
+    }
+  }
+
+  /* For mobile screens */
+  @media (max-width: 767px) {
+    .sponsorship-container iframe {
+      height: 130px;
+    }
+  }
+</style>
+
 <Layout title="Ginger Society Official Website">
   <Hero
     title="Explore Innovation @ Ginger Society"
@@ -89,6 +105,14 @@ const productCards = [
     secondaryLink="/features"
   />
   <InstallationInstruction />
+  <div class="sponsorship-container">
+    <iframe
+      src="https://github.com/sponsors/ginger-society/card"
+      title="Sponsor ginger-society"
+      height="72"
+      width="100%"
+      style="border: 0;"></iframe>
+  </div>
   {
     productCards.map((product) => (
       <ProductCard

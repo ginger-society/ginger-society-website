@@ -1,0 +1,124 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import LongText from "../components/LongText.astro";
+import LongTextSection from "../components/LongTextSection.astro";
+
+const navItems = [
+  { id: "item1", label: "Information We Collect" },
+  { id: "item2", label: "How We Use Your Information" },
+  { id: "item3", label: "Information Sharing and Disclosure" },
+  { id: "item4", label: "Data Security" },
+  { id: "item5", label: "Your Choices and Rights" },
+  { id: "item6", label: "Children's Privacy" },
+  { id: "item7", label: "Updates to Privacy Policy and Acceptance" },
+];
+---
+
+<Layout title="Privacy Policy | Ginger Society">
+  <PageHeader
+    title="Privacy Policy"
+    content="At Ginger Society, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard the information you provide to us through our website."
+  />
+
+  <LongText navItems={navItems}>
+    <LongTextSection id="item1" title="Information We Collect">
+      <ul>
+        <li>
+          Personal Information: When you visit our website or interact with us,
+          we may collect personal information such as your name, email address,
+          and contact details.
+        </li>
+        <li>
+          Usage Information: We may also collect non-personal information about
+          your visit, including your IP address, browser type, device
+          information, and browsing behavior on our website.
+        </li>
+      </ul>
+    </LongTextSection>
+
+    <LongTextSection id="item2" title="How We Use Your Information">
+      <ul>
+        <li>
+          Personalization: We use your information to personalize your
+          experience on our website and provide relevant content and services
+          based on your preferences.
+        </li>
+        <li>
+          Communication: We may use your contact information to send you
+          updates, newsletters, and promotional offers related to Ginger Society
+          and its activities.
+        </li>
+        <li>
+          Analytics: We use analytics tools to analyze website traffic, track
+          user behavior, and improve our website's functionality and
+          performance.
+        </li>
+      </ul>
+    </LongTextSection>
+
+    <LongTextSection id="item3" title="Information Sharing and Disclosure">
+      <ul>
+        <li>
+          We do not sell, trade, or transfer your personal information to third
+          parties without your consent, except as required by law or for legal
+          purposes.
+        </li>
+        <li>
+          We may share your information with trusted service providers who
+          assist us in operating our website, conducting business activities, or
+          providing services to you.
+        </li>
+      </ul>
+    </LongTextSection>
+
+    <LongTextSection id="item4" title="Data Security">
+      <p>
+        We implement security measures to protect your information from
+        unauthorized access, misuse, or disclosure. However, no data
+        transmission over the internet or electronic storage is 100% secure. We
+        cannot guarantee absolute security of your information.
+      </p>
+    </LongTextSection>
+
+    <LongTextSection id="item5" title="Your Choices and Rights">
+      <ul>
+        <li>
+          You have the right to access, update, or delete your personal
+          information by contacting us.
+        </li>
+        <li>
+          You may opt out of receiving promotional emails or newsletters by
+          following the unsubscribe instructions included in the emails.
+        </li>
+      </ul>
+    </LongTextSection>
+
+    <LongTextSection id="item6" title="Children's Privacy">
+      <p>
+        Our website is not intended for children under the age of 13. We do not
+        knowingly collect or solicit personal information from children.
+      </p>
+    </LongTextSection>
+
+    <LongTextSection
+      id="item7"
+      title="Updates to Privacy Policy and Acceptance"
+    >
+      <ul>
+        <li>
+          We may update this Privacy Policy periodically. Any changes will be
+          reflected on this page, and your continued use of our website
+          constitutes acceptance of the updated Privacy Policy.
+        </li>
+        <li>
+          By using our website, you agree to the terms of this Privacy Policy.
+          If you have any questions or concerns about our Privacy Policy or data
+          practices, please contact us at <a
+            href="mailto:hello@gingersociety.org">hello@gingersociety.org</a
+          >.
+        </li>
+      </ul>
+    </LongTextSection>
+  </LongText>
+</Layout>

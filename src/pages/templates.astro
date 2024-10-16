@@ -1,0 +1,130 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProductCard from "../components/ProductCard.astro";
+
+// Data for each product card (used for sections)
+const productCards: any[] = [
+  {
+    title: "Backend in Rust",
+    description: "Using Rocket Framework with Diesel as ORM",
+    imgSrc: "https://www.gingersociety.org/images/backend-rust-template.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://github.com/ginger-society/template-backend-rust",
+    secondaryLinkLabel: "View on github",
+    reversed: false,
+  },
+  {
+    title: "Backend in KoaJS",
+    description: "A fast, Typesafe API project using TypeORM",
+    imgSrc: "https://www.gingersociety.org/images/backend-koajs-template.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://github.com/ginger-society/template-backend-koa-js",
+    secondaryLinkLabel: "View on github",
+    reversed: true,
+  },
+  {
+    title: "Backend using FastAPI",
+    description:
+      "We have added SQLAlchemy as the ORM in Python Programing language",
+    imgSrc: "https://www.gingersociety.org/images/backend-fastapi-template.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://github.com/ginger-society/backend-fastapi-template",
+    secondaryLinkLabel: "View on github",
+    reversed: false,
+  },
+  {
+    title: "Backend using GingerDJ framework",
+    description:
+      "Containerised, Production ready backend project using GingerDJ",
+    imgSrc: "https://www.gingersociety.org/images/ginger-dj-template.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink:
+      "https://github.com/ginger-society/template-backend-ginger-dj",
+    secondaryLinkLabel: "View on github",
+    reversed: true,
+  },
+  {
+    title: "Frontend Using NextJS-T3 Stack",
+    description:
+      "Write end to end TypeSafe Frontend pages using NextJS with Page Router",
+    imgSrc: "https://www.gingersociety.org/images/frontend-t3-template.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://github.com/ginger-society/template-nextjs",
+    secondaryLinkLabel: "View on github",
+    reversed: false,
+  },
+  {
+    title: "Frontend Using Vite - React",
+    description: "Best way to create SPA in React",
+    imgSrc: "https://www.gingersociety.org/images/ginger-dj-template.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://github.com/ginger-society/template-vite-react-spa",
+    secondaryLinkLabel: "View on github",
+    reversed: true,
+  },
+  {
+    title: "JavaScript Library",
+    description:
+      "Build and deploy reusable utility / helper functions library in JavaScript and deploy on NPM",
+    imgSrc: "https://www.gingersociety.org/images/js-lib-template.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://github.com/ginger-society/template-js-library",
+    secondaryLinkLabel: "View on github",
+    reversed: false,
+  },
+  {
+    title: "Python Library",
+    description: "Create reusable Python library and deploy on PyPi",
+    imgSrc: "https://www.gingersociety.org/images/py-lib-template.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://github.com/ginger-society/template-python-library",
+    secondaryLinkLabel: "View on github",
+    reversed: true,
+  },
+  {
+    title: "React UI Library",
+    description: "Build reusable React Component Library and deploy on NPM",
+    imgSrc: "https://www.gingersociety.org/images/react-ui-lib-template.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink:
+      "https://github.com/ginger-society/template-react-ui-library",
+    secondaryLinkLabel: "View on github",
+    reversed: false,
+  },
+];
+---
+
+<Layout title="GingerDJ Framework| Ginger Society">
+  <!-- Product Sections (Features) -->
+  {
+    productCards.map((product) => (
+      <ProductCard
+        title={product.title}
+        description={product.description}
+        imgSrc={product.imgSrc}
+        imgAlt={product.imgAlt}
+        primaryLink={product.primaryLink}
+        primaryLinkLabel={product.primaryLinkLabel}
+        reversed={product.reversed}
+      />
+    ))
+  }
+</Layout>

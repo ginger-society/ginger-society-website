@@ -1,0 +1,85 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import ProductCard from "../../components/ProductCard.astro";
+
+// Data for each product card (used for sections)
+const productCards = [
+  {
+    title: "OpenAPI Spec",
+    description:
+      "Get swagger UI out of the box to test your API. Create custom request and response type with pre and post handler validation of the data.",
+    imgSrc: "https://gingersociety.org/images/swagger.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://docs.gingersociety.org/docs/ginger-dj",
+    secondaryLinkLabel: "Know more",
+    reversed: false,
+  },
+  {
+    title: "Highly observable",
+    description:
+      "Get logs and metrics with built-in prometheus metrics collection for endpoints and data models with declarative syntax.",
+    imgSrc: "https://gingersociety.org/images/observability.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://docs.gingersociety.org/docs/ginger-dj",
+    secondaryLinkLabel: "Know more",
+    reversed: true,
+  },
+  {
+    title: "Expressive ORM",
+    description:
+      "Built upon Django's ORM which lets you design complex data models, Ensures SQL relations integrity and retrieve data with efficient query engine.",
+    imgSrc: "https://gingersociety.org/images/ginger-dj-orm.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://docs.gingersociety.org/docs/ginger-dj",
+    secondaryLinkLabel: "Know more",
+    reversed: false,
+  },
+  {
+    title: "Pluggable authentication",
+    description:
+      "Bring in your own authentication and authorization logic. Supports persistent contextual data across middlewares.",
+    imgSrc: "https://gingersociety.org/images/pluggable-authentication.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://docs.gingersociety.org/docs/ginger-dj",
+    secondaryLinkLabel: "Know more",
+    reversed: true,
+  },
+];
+---
+
+<Layout title="GingerDJ Framework| Ginger Society">
+  <!-- Hero Section -->
+  <Hero
+    title="GingerDJ"
+    description="Batteries included Microservice framework for writing expressive business logic. Decouple logic from the framework specific boilerplate. Write readable database queries."
+    primaryLinkLabel="View on Github"
+    primaryLink="https://github.com/ginger-society/ginger-DJ"
+    imgUrl="https://www.gingersociety.org/images/ginger-dj.png"
+  />
+
+  <!-- Product Sections (Features) -->
+  {
+    productCards.map((product) => (
+      <ProductCard
+        title={product.title}
+        description={product.description}
+        imgSrc={product.imgSrc}
+        imgAlt={product.imgAlt}
+        primaryLink={product.primaryLink}
+        primaryLinkLabel={product.primaryLinkLabel}
+        secondaryLink={product.secondaryLink}
+        secondaryLinkLabel={product.secondaryLinkLabel}
+        reversed={product.reversed}
+      />
+    ))
+  }
+</Layout>

@@ -1,0 +1,241 @@
+---
+
+---
+
+<style>
+  /* Dark theme styles */
+  .long-text-wrapper {
+    padding: 150px;
+    padding-top: 70px;
+    background-color: #1c1c1e;
+    color: #e5e5e5;
+  }
+
+  .card {
+    margin-bottom: 20px;
+    border: 1px solid #3a3a3c;
+    border-radius: 8px;
+    background-color: #3a3a3c;
+  }
+
+  .text-card-wrapper {
+    margin-bottom: 20px;
+    border: 1px solid #3a3a3c;
+    border-radius: 8px;
+    background-color: #3a3a3c;
+    padding-left: 20px;
+  }
+
+  .sub-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #e5e5e5;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-text p,
+  .card-text ul {
+    font-size: 1rem;
+    color: #d1d1d6;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .card-text ul {
+    padding-left: 20px;
+  }
+
+  .card-text ul li {
+    margin-bottom: 10px;
+  }
+
+  .long-text-nav {
+    position: sticky;
+    top: 120px;
+  }
+
+  .long-text-nav .nav-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .long-text-nav .nav-pills .nav-link {
+    color: #ffffff;
+    background-color: #2c2c2e;
+    border-radius: 0.25rem;
+    padding: 10px 15px;
+    font-weight: 500;
+    border: 1px solid #3a3a3c;
+    transition: background-color 0.2s ease;
+    text-decoration: none;
+  }
+
+  .long-text-nav .nav-pills .nav-link:hover,
+  .long-text-nav .nav-pills .nav-link.active {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+
+  /* Layout styles */
+  .layout {
+    display: flex;
+  }
+
+  .content {
+    width: 80%;
+  }
+
+  .navigation {
+    width: 20%;
+  }
+  .navigation ul {
+    list-style: none;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .layout {
+      flex-direction: column;
+    }
+
+    .content,
+    .navigation {
+      width: 100%;
+    }
+
+    .long-text-wrapper {
+      padding: 15px;
+    }
+  }
+</style>
+
+<div class="long-text-wrapper">
+  <div class="layout">
+    <div class="content">
+      <div id="navbar-example2">
+        <div class="long-text-items" id="item1">
+          <div class="text-card-wrapper">
+            <h3 class="sub-title">Our Vision</h3>
+            <div class="card-body">
+              <div class="card-text">
+                <p>
+                  To create a sustainable and accessible environment for
+                  open-source software, fostering innovation, collaboration, and
+                  transparency.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="long-text-items" id="item2">
+          <div class="text-card-wrapper">
+            <h3 class="sub-title">Core Values</h3>
+            <div class="card-body">
+              <div class="card-text">
+                <ul>
+                  <li>
+                    <strong>Openness</strong>: We believe in the power of
+                    open-source software to drive innovation and foster
+                    collaboration among developers worldwide.
+                  </li>
+                  <li>
+                    <strong>Community</strong>: Our strength lies in the
+                    diversity and inclusivity of our developer community, where
+                    everyone's contributions are valued and celebrated.
+                  </li>
+                  <li>
+                    <strong>Transparency</strong>: We are committed to
+                    transparency in our processes, decisions, and interactions,
+                    ensuring trust and accountability within our community.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="long-text-items" id="item3">
+          <div class="text-card-wrapper">
+            <h3 class="sub-title">Key Activities</h3>
+            <div class="card-body">
+              <div class="card-text">
+                <ul>
+                  <li>
+                    <strong>Identification and Forking</strong>: We identify
+                    widely-used open-source libraries and packages at risk of
+                    becoming closed-source. We create forks of these projects to
+                    ensure their continued availability and openness.
+                  </li>
+                  <li>
+                    <strong>DevOps Infrastructure</strong>: We build robust
+                    DevOps infrastructure to streamline development, testing,
+                    and deployment processes for the forked projects.
+                  </li>
+                  <li>
+                    <strong>Brand Removal and Integration Cleanup</strong>: We
+                    remove for-profit branding and any integration-related code
+                    that hinders openness and accessibility.
+                  </li>
+                  <li>
+                    <strong>Multi-Channel Deployment</strong>: We deploy the
+                    forked packages on various delivery channels such as npm,
+                    Docker, apt, and brew, making them easily accessible to
+                    developers across different platforms.
+                  </li>
+                  <li>
+                    <strong>Feature Implementation</strong>: We implement new
+                    features and updates to the forked projects with a 1-month
+                    Service Level Agreement (SLA), ensuring timely enhancements
+                    and bug fixes.
+                  </li>
+                  <li>
+                    <strong>Developer Education</strong>: We educate the
+                    developer community about the benefits of using open-source
+                    software and making informed choices to support openness and
+                    innovation.
+                  </li>
+                  <li>
+                    <strong>Community Forum</strong>: We maintain a vibrant
+                    community forum for discussions, knowledge sharing, and
+                    collaboration among developers, fostering a supportive and
+                    engaged community.
+                  </li>
+                  <li>
+                    <strong>Inter-Library Compatibility</strong>: We address and
+                    resolve inter-library compatibility issues, ensuring
+                    seamless integration and interoperability for all projects
+                    using our forked packages.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation">
+      <nav class="navbar navbar-light long-text-nav">
+        <ul class="nav nav-pills">
+          <li>
+            <a href="#item1" class="nav-link">Our Vision</a>
+          </li>
+          <li>
+            <a href="#item2" class="nav-link">Core Values</a>
+          </li>
+          <li>
+            <a href="#item3" class="nav-link">Key Activities</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script></script>

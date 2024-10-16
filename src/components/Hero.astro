@@ -1,12 +1,13 @@
 ---
-const title = "Explore Innovation @ Ginger Society";
-const description =
-  "Build better products with our range of products and dev tools.";
-const demoLink =
-  "https://dev-portal-staging.gingersociety.org/#/public/ginger-society/stage";
-const moreInfoLink = "/features";
-const featureImage =
-  "https://gingersociety.org/images/innovations-at-ginger.png";
+const {
+  title,
+  description,
+  primaryLinkLabel,
+  primaryLink,
+  imgUrl,
+  secondaryLinkLabel,
+  secondaryLink,
+} = Astro.props;
 ---
 
 <style>
@@ -74,14 +75,22 @@ const featureImage =
         <h1>{title}</h1>
         <p>{description}</p>
         <div style="display: flex; gap: 20px;" class="mb-6">
-          <a href={demoLink} class="btn btn-primary btn-lg">Demo</a>
-          <a href={moreInfoLink} class="btn btn-lg btn-links">Know more</a>
+          <a href={primaryLink} class="btn btn-primary btn-lg"
+            >{primaryLinkLabel}</a
+          >
+          {
+            secondaryLinkLabel && (
+              <a href={secondaryLink} class="btn btn-lg btn-links">
+                {secondaryLinkLabel}
+              </a>
+            )
+          }
         </div>
       </div>
     </div>
     <div class="col-lg-6">
       <div class="feature-hero-banner" style="position: relative;">
-        <img src={featureImage} alt="Charts" loading="lazy" />
+        <img src={imgUrl} alt="Feature Image" loading="lazy" />
       </div>
     </div>
   </div>

@@ -1,0 +1,34 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import ProductCard from "../../components/ProductCard.astro";
+
+// Data for each product card (used for sections)
+const productCards: any[] = [];
+---
+
+<Layout title="GingerDJ Framework| Ginger Society">
+  <!-- Hero Section -->
+  <Hero
+    title="GingerUI"
+    description="A react UI library based on Uber's baseweb design system"
+    primaryLinkLabel="Get started"
+    primaryLink="https://docs.gingersociety.org/docs/ginger-ui/"
+    imgUrl="https://www.gingersociety.org/images/ginger-ui.png"
+  />
+
+  <!-- Product Sections (Features) -->
+  {
+    productCards.map((product) => (
+      <ProductCard
+        title={product.title}
+        description={product.description}
+        imgSrc={product.imgSrc}
+        imgAlt={product.imgAlt}
+        primaryLink={product.primaryLink}
+        primaryLinkLabel={product.primaryLinkLabel}
+        reversed={product.reversed}
+      />
+    ))
+  }
+</Layout>

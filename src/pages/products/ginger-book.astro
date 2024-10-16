@@ -1,0 +1,60 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import ProductCard from "../../components/ProductCard.astro";
+
+// Data for each product card (used for sections)
+const productCards: any[] = [
+  {
+    title: "Faster than Flash!",
+    description:
+      "Built with vite so it starts instanly and refreshes instantly.",
+    imgSrc:
+      "https://www.gingersociety.org/images/ginger-book-speed-comparision.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://docs.gingersociety.org/docs/ginger-book",
+    secondaryLinkLabel: "Know more",
+    reversed: false,
+  },
+  {
+    title: "Mock REST and GraphQL endpoints",
+    description:
+      "Still mocking data using constants ? Use real network layer mocking to simulate real API calls.",
+    imgSrc: "https://www.gingersociety.org/images/ginger-book-msw.png",
+    imgAlt: "Message inbox",
+    primaryLink: "",
+    primaryLinkLabel: "",
+    secondaryLink: "https://docs.gingersociety.org/docs/ginger-book",
+    secondaryLinkLabel: "Know more",
+    reversed: true,
+  },
+];
+---
+
+<Layout title="GingerDJ Framework| Ginger Society">
+  <!-- Hero Section -->
+  <Hero
+    title="GingerBook"
+    description="Build and test UI components independently"
+    primaryLinkLabel="View on github"
+    primaryLink="https://github.com/ginger-society/ginger-book"
+    imgUrl="https://www.gingersociety.org/images/ginger-book.png"
+  />
+
+  <!-- Product Sections (Features) -->
+  {
+    productCards.map((product) => (
+      <ProductCard
+        title={product.title}
+        description={product.description}
+        imgSrc={product.imgSrc}
+        imgAlt={product.imgAlt}
+        primaryLink={product.primaryLink}
+        primaryLinkLabel={product.primaryLinkLabel}
+        reversed={product.reversed}
+      />
+    ))
+  }
+</Layout>

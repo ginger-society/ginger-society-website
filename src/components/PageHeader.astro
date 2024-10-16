@@ -1,0 +1,38 @@
+---
+export interface Props {
+  title: string;
+  content: string;
+}
+
+const { title, content } = Astro.props;
+---
+
+<style>
+  /* Styles for the page header content */
+  .page-header-content {
+    background-color: #1c1c1e; /* Dark background */
+    color: #e5e5e5; /* Light text color */
+    padding: 50px 20px; /* Padding around the content */
+    text-align: center; /* Center the text */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  }
+
+  .page-header-content h1 {
+    font-size: 2.5rem; /* Large heading size */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+
+  .page-header-content p {
+    font-size: 1.25rem; /* Medium paragraph size */
+    line-height: 1.6; /* Line height for readability */
+    margin: 0; /* Reset margin */
+  }
+</style>
+
+<div class="page-header-content">
+  <h1>{title}</h1>
+  <div>
+    <p>{content}</p>
+  </div>
+</div>

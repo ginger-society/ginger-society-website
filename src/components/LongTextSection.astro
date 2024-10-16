@@ -1,0 +1,56 @@
+---
+export interface Props {
+  title: string;
+  id: string;
+}
+
+const { title } = Astro.props;
+---
+
+<style>
+  .text-card-wrapper {
+    margin-bottom: 20px;
+    border: 1px solid #3a3a3c;
+    border-radius: 8px;
+    background-color: #3a3a3c;
+    padding-left: 20px;
+  }
+
+  .sub-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #e5e5e5;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-text p,
+  .card-text ul {
+    font-size: 1rem;
+    color: #d1d1d6;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .card-text ul {
+    padding-left: 20px;
+  }
+
+  .card-text ul li {
+    margin-bottom: 10px;
+  }
+</style>
+
+<div class="long-text-items" id={Astro.props.id}>
+  <div class="text-card-wrapper">
+    <h3 class="sub-title">{title}</h3>
+    <div class="card-body">
+      <div class="card-text">
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>

@@ -19,43 +19,71 @@ const navLinks = [
 ];
 ---
 <script>
-    if (typeof window !== "undefined") {
-      const navbarToggle = document.querySelector(".navbar-toggle");
+  if (typeof window !== "undefined") {
+    const currentPath = window.location.pathname;
+
+    // Highlight the current route in the navbar
+    document.querySelectorAll('li').forEach(li => {
+      const link = li.querySelector('a.nav-link, a.dropdown-item');
       
-      // Toggle mobile menu on click
-      navbarToggle?.addEventListener("click", function (this: HTMLDivElement) {
-        const navLinks = document.querySelector("ul.nav-links");
-        this.classList.toggle("active");
-        if (navLinks) {
-          navLinks.classList.toggle("open");
-        }
-      });
-  
-      // Expand "Projects" section on mobile
-      const projectLink = document.querySelector(".projects-link");
-      const projectsLinks = document.querySelector(".projects-links");
-  
-      if (projectLink && projectsLinks) {
-        projectLink.addEventListener("click", function (e) {
-          e.preventDefault();
-          projectsLinks.classList.toggle("expanded");
-        });
+      if (link && link.getAttribute('href') === currentPath) {
+        li.classList.add('active');  // Add active class to <li>
+        link.classList.add('active'); // Optionally, add to <a>
       }
-  
-      // Collapse submenu when clicking outside of it
-      document.addEventListener("click", function ({ target }) {
-        if (!projectLink || !projectsLinks || !target) {
-          return;
-        }
-        const isClickInside =
-          projectLink.contains(target as Node) ||
-          projectsLinks.contains(target as Node);
-        if (!isClickInside && projectsLinks.classList.contains("expanded")) {
-          projectsLinks.classList.remove("expanded");
-        }
+    });
+
+    // Highlight the "Projects" link if the current route starts with "/products/"
+    const projectsLi = document.querySelector('li > a.projects-link')?.closest('li');
+    const subLinks = document.querySelectorAll('.projects-links a.dropdown-item');
+
+    subLinks.forEach((subLink) => {
+      if (currentPath.startsWith('/products/') && subLink.getAttribute('href') === currentPath) {
+        projectsLi.classList.add('active'); // Add active class to <li> of Projects
+        projectsLi.querySelector('a.projects-link').classList.add('active'); // Highlight Projects link
+        subLink.classList.add('active'); // Highlight the specific project link
+      }
+    });
+
+    const navbarToggle = document.querySelector(".navbar-toggle");
+
+    // Toggle mobile menu on click
+    navbarToggle?.addEventListener("click", function (this: HTMLDivElement) {
+      const navLinks = document.querySelector("ul.nav-links");
+      this.classList.toggle("active");
+      if (navLinks) {
+        navLinks.classList.toggle("open");
+      }
+    });
+
+    // Expand "Projects" section on mobile
+    const projectLink = document.querySelector(".projects-link");
+    const projectsLinks = document.querySelector(".projects-links");
+
+    if (projectLink && projectsLinks) {
+      projectLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        projectsLinks.classList.toggle("expanded");
       });
     }
-  </script>
+
+    // Collapse submenu when clicking outside of it
+    document.addEventListener("click", function ({ target }) {
+      if (!projectLink || !projectsLinks || !target) {
+        return;
+      }
+      const isClickInside =
+        projectLink.contains(target as Node) ||
+        projectsLinks.contains(target as Node);
+      if (!isClickInside && projectsLinks.classList.contains("expanded")) {
+        projectsLinks.classList.remove("expanded");
+      }
+    });
+  }
+</script>
+
+  
+  
+  
   
   <style>
     /* Navbar container */
@@ -187,8 +215,13 @@ const navLinks = [
       width: fit-content;
       display: block;
       padding: 10px 20px;
+      border-radius: 20px;
     }
-  
+    
+    .nav-link:hover{
+        background-color: rgb(45, 45, 45);
+    }
+
     /* Dropdown items */
     ul.dropdown-menu > li {
       padding: 10px;
@@ -218,9 +251,9 @@ const navLinks = [
     }
   
     .login-btn {
-      width: 120px;
-      margin-left: auto;
-      padding-top: 8px;
+        width: 120px;
+        margin-left: auto;
+        padding-top: 8px;
         padding-bottom: 8px;
     }
   
@@ -230,6 +263,16 @@ const navLinks = [
     .mobile-login-btn{
         margin-left: auto;
     }
+
+    .nav-link.active {
+        background-color: #f85907; /* Highlight color */
+        color: white;
+    }
+
+    li.active {
+        background-color: #f85907; /* Highlight color for li */
+    }
+
   </style>
   
   <nav>

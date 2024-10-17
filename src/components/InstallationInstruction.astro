@@ -86,7 +86,7 @@
     function truncateCommand(command: string) {
       const maxLength = 40; // Maximum length to show for the command
       if (command.length > maxLength) {
-        const start = command.slice(0, 20); // First 10 characters
+        const start = command.slice(0, 10); // First 10 characters
         const end = command.slice(-20); // Last 10 characters
         return `${start}...${end}`; // Combine with ellipsis
       }

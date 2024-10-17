@@ -18,255 +18,260 @@ const navLinks = [
   { label: "Internships", href: "/internships/" },
 ];
 ---
-
 <script>
-  if (typeof window !== "undefined") {
-    const navbarToggle = document.querySelector(".navbar-toggle");
-    
-    // Toggle mobile menu on click
-    navbarToggle?.addEventListener("click", function (this: HTMLDivElement) {
-      const navLinks = document.querySelector("ul.nav-links");
-      this.classList.toggle("active");
-      if (navLinks) {
-        navLinks.classList.toggle("open");
+    if (typeof window !== "undefined") {
+      const navbarToggle = document.querySelector(".navbar-toggle");
+      
+      // Toggle mobile menu on click
+      navbarToggle?.addEventListener("click", function (this: HTMLDivElement) {
+        const navLinks = document.querySelector("ul.nav-links");
+        this.classList.toggle("active");
+        if (navLinks) {
+          navLinks.classList.toggle("open");
+        }
+      });
+  
+      // Expand "Projects" section on mobile
+      const projectLink = document.querySelector(".projects-link");
+      const projectsLinks = document.querySelector(".projects-links");
+  
+      if (projectLink && projectsLinks) {
+        projectLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          projectsLinks.classList.toggle("expanded");
+        });
       }
-    });
-
-    // Expand "Projects" section on mobile
-    const projectLink = document.querySelector(".projects-link");
-    const projectsLinks = document.querySelector(".projects-links");
-
-    if (projectLink && projectsLinks) {
-      projectLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        projectsLinks.classList.toggle("expanded");
+  
+      // Collapse submenu when clicking outside of it
+      document.addEventListener("click", function ({ target }) {
+        if (!projectLink || !projectsLinks || !target) {
+          return;
+        }
+        const isClickInside =
+          projectLink.contains(target as Node) ||
+          projectsLinks.contains(target as Node);
+        if (!isClickInside && projectsLinks.classList.contains("expanded")) {
+          projectsLinks.classList.remove("expanded");
+        }
       });
     }
-
-    // Collapse submenu when clicking outside of it
-    document.addEventListener("click", function ({target}) {
-        if (!projectLink || !projectsLinks || !target)  {
-            return;
-        }
-      const isClickInside = projectLink.contains(target as Node) || projectsLinks.contains(target as Node);
-      if (!isClickInside && projectsLinks.classList.contains("expanded")) {
-        projectsLinks.classList.remove("expanded");
-      }
-    });
-  }
-</script>
-
-<style>
-  /* Navbar container */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: black;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
-
-  /* Brand styling */
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    color: white;
-    min-width: 220px;
-  }
-
-  .navbar-brand img {
-    margin-right: 10px;
-  }
-
-  /* Hamburger menu */
-  .navbar-toggle {
-    display: block;
-    background-color: #f85907;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  .navbar-toggle.active {
-    background-color: #f85907;
-  }
-
-  .navbar-toggle span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    margin: 3.2px;
-    background-color: white;
-  }
-
-  /* Mobile dropdown menu styling */
-  ul.nav-links {
-    list-style: none;
-    display: none;
-    flex-direction: column;
-    gap: 20px;
-    margin: 0;
-    padding: 20px;
-    background-color: black;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-  }
-
-  ul.nav-links.open {
-    display: flex;
-  }
-
-  /* Expanded Projects section on mobile */
-  ul.projects-links {
-    display: none;
-    padding-left: 0px;
-    background-color: #3d3d3d; /* Slightly grey background */
-    list-style: none;
-    position: absolute;
-    margin-top: 30px
-  }
-
-  ul.projects-links li{
-    padding: 15px 20px 15px 20px;
-  }
-  ul.projects-links li:hover{
-    background: black;
-    cursor: pointer;
-  }
-
-  ul.projects-links.expanded {
-    display: block;
-  }
-
-  @media (max-width: 768px) {
-
-    ul.projects-links {
-        position: relative;
-    }
-
-    ul.nav-links {
-      height: fit-content;
-    }
-
-
-  }
-
-  /* For desktop view */
-  @media (min-width: 768px) {
-    ul.nav-links {
+  </script>
+  
+  <style>
+    /* Navbar container */
+    nav {
       display: flex;
-      flex-direction: row;
-      position: static;
-      background-color: transparent;
-      height: auto;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: black;
+      position: sticky;
+      top: 0;
+      z-index: 1;
     }
-
+  
+    /* Brand styling */
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      color: white;
+      min-width: 220px;
+    }
+  
+    .navbar-brand img {
+      margin-right: 10px;
+    }
+  
+    /* Hamburger menu */
     .navbar-toggle {
-      display: none;
+      display: block;
+      background-color: #f85907;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-left: 20px;
     }
-  }
+  
+    .navbar-toggle.active {
+      background-color: #f85907;
+    }
+  
+    .navbar-toggle span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      margin: 3.2px;
+      background-color: white;
+    }
+  
+    /* Mobile dropdown menu styling */
+    ul.nav-links {
+      list-style: none;
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      margin: 0;
+      padding: 20px;
+      background-color: black;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 10;
+    }
+  
+    ul.nav-links.open {
+      display: flex;
+    }
+  
+    /* Expanded Projects section on mobile */
+    ul.projects-links {
+      display: none;
+      padding-left: 0px;
+      background-color: #3d3d3d; /* Slightly grey background */
+      list-style: none;
+      position: absolute;
+      margin-top: 30px;
+    }
+  
+    ul.projects-links li {
+      padding: 15px 20px 15px 20px;
+    }
+  
+    ul.projects-links li:hover {
+      background: black;
+      cursor: pointer;
+    }
+  
+    ul.projects-links.expanded {
+      display: block;
+    }
+  
+    @media (max-width: 768px) {
+      ul.projects-links {
+        position: relative;
+      }
+  
+      ul.nav-links {
+        height: fit-content;
+      }
+    }
+  
+    /* For desktop view */
+    @media (min-width: 768px) {
+      ul.nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        height: auto;
+      }
+  
+      .navbar-toggle {
+        display: none;
+      }
+    }
+  
+    .nav-link {
+      color: white;
+      cursor: pointer;
+    }
+  
+    /* Dropdown items */
+    ul.dropdown-menu > li {
+      padding: 10px;
+    }
+  
+    .dropdown-item {
+      color: white;
+    }
+  
+    .gh-btn {
+      padding: 5px 10px;
+      background-color: #f85907;
+      color: white;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+  
+    .btn-secondary {
+      padding: 5px 10px;
+      border: solid 2px #f85907;
+      color: white;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+    }
+  
+    .login-btn {
+      width: 120px;
+      margin-left: auto;
+      padding-top: 8px;
+        padding-bottom: 8px;
+    }
+  
+    a {
+      text-decoration: none;
+    }
+    .mobile-login-btn{
+        margin-left: auto;
+    }
+  </style>
+  
+  <nav>
+    <a href="/" class="navbar-brand">
+      <img
+        src="https://gingersociety.org/images/ginger_icon.png"
+        alt="Nav-Logo"
+        height="50px"
+      />
+      Ginger Society
+    </a>
+  
 
-  .nav-link {
-    color: white;
-    cursor: pointer;
-  }
+    <!-- Nav links -->
+    <ul class="nav-links">
+      {navLinks.map((link) =>
+        link.links ? (
+          <li>
+            <a href="#" class="projects-link nav-link">
+              {link.label}
+            </a>
+            <!-- Submenu for Projects -->
+            <ul class="projects-links">
+              {link.links.map((subLink) => (
+                <li>
+                  <a class="dropdown-item" href={subLink.href}>
+                    {subLink.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ) : (
+          <li>
+            <a href={link.href} class="nav-link">
+              {link.label}
+            </a>
+          </li>
+        )
+      )}
+  
+      <!-- Mobile Sign In/Sign Up Button -->
+      <li class="mobile-login-btn">
+        <a class="btn-secondary btn-links login-btn" href="https://iam-staging.gingersociety.org/#dev-portal-staging/login">
+          Sign in / Sign up
+        </a>
+      </li>
+    </ul>
 
-  /* Dropdown items */
-  ul.dropdown-menu > li {
-    padding: 10px;
-  }
-
-  .dropdown-item {
-    color: white;
-  }
-
-  .btn {
-    padding: 5px 10px;
-    background-color: #f85907;
-    color: white;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-  }
-
-  .btn-secondary{
-    padding: 5px 10px;
-    border: solid 2px #f85907;
-    color: white;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-  }
-  .buttons{
-    display: flex;
-    gap: 15px;
-  }
-  a{
-    text-decoration: none;
-  }
-  .login-btn{
-    width: 120px;
-  }
-</style>
-
-<nav>
-  <a href="/" class="navbar-brand">
-    <img
-      src="https://gingersociety.org/images/ginger_icon.png"
-      alt="Nav-Logo"
-      height="50px"
-    />
-    Ginger Society
-  </a>
-
-  <!-- Hamburger menu for mobile -->
-  <div class="navbar-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <!-- Nav links -->
-  <ul class="nav-links">
-    {navLinks.map((link) =>
-      link.links ? (
-        <li>
-          <a href="#" class="projects-link nav-link">
-            {link.label}
-          </a>
-          <!-- Submenu for Projects -->
-          <ul class="projects-links">
-            {link.links.map((subLink) => (
-              <li>
-                <a class="dropdown-item" href={subLink.href}>
-                  {subLink.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </li>
-      ) : (
-        <li>
-          <a href={link.href} class="nav-link">
-            {link.label}
-          </a>
-        </li>
-      )
-    )}
-  </ul>
-
-  <!-- Buttons (like Donate and GitHub) -->
-  <div class="buttons">
-    <a class="btn-secondary btn-links login-btn" href="https://iam-staging.gingersociety.org/#dev-portal-staging/login">Sign in / Sign up</a>
-    <a href="https://github.com/ginger-society" class="btn">
-      <svg
+  
+    <!-- Desktop Buttons -->
+    <a href="https://github.com/ginger-society" class="gh-btn">
+    <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
         y="0px"
@@ -275,11 +280,19 @@ const navLinks = [
         viewBox="0 0 30 30"
         stroke="white"
         fill="white"
-      >
+    >
         <path
-          d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
+        d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
         ></path>
-      </svg>
+    </svg>
     </a>
-  </div>
-</nav>
+
+    <!-- Hamburger menu for mobile -->
+    <div class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+            
+  </nav>
+  

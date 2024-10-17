@@ -81,12 +81,12 @@ const { navItems } = Astro.props;
 
   .nav-link:hover {
     background-color: #f85907; /* Blue background on hover */
-    color: white;
+    color: white !important;
   }
 
   .nav-link.active {
     background-color: #f85907; /* Active state */
-    color: white;
+    color: white !important;
   }
 
   /* Responsive layout for smaller screens */
@@ -98,6 +98,7 @@ const { navItems } = Astro.props;
     .content,
     .navigation {
       width: 100%;
+      padding: 0;
     }
 
     .long-text-wrapper {
@@ -115,6 +116,7 @@ const { navItems } = Astro.props;
 
     <!-- Navigation section -->
     <div class="navigation">
+      <h3>On this page</h3>
       <nav class="navbar long-text-nav">
         <ul class="nav nav-pills">
           {

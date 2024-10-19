@@ -2,12 +2,12 @@
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
 import ProductCard from "../../components/ProductCard.astro";
+import { Content as ScaffolderMD } from "../../components/markdowns/scaffolder.md";
 
-// Data for each product card (used for sections)
 const productCards: any[] = [];
 ---
 
-<Layout title="GingerDJ Framework| Ginger Society">
+<Layout title="GingerScaffolder | Ginger Society">
   <!-- Hero Section -->
   <Hero
     title="GingerScaffolder"
@@ -16,6 +16,8 @@ const productCards: any[] = [];
     primaryLink="https://docs.gingersociety.org/docs/ginger-scaffolder/"
     imgUrl="https://www.gingersociety.org/images/ginger-scaffolder.png"
   />
+
+  <div class="markdown-container"><ScaffolderMD /></div>
 
   <!-- Product Sections (Features) -->
   {
@@ -32,3 +34,19 @@ const productCards: any[] = [];
     ))
   }
 </Layout>
+
+<style>
+  .markdown-container {
+    padding: 50px;
+    padding-left: 160px;
+    padding-right: 160px;
+    font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    .markdown-container {
+      padding: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+</style>

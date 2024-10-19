@@ -2,12 +2,12 @@
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
 import ProductCard from "../../components/ProductCard.astro";
-
+import { Content as ReleaserMD } from "../../components/markdowns/releaser.md";
 // Data for each product card (used for sections)
 const productCards: any[] = [];
 ---
 
-<Layout title="GingerDJ Framework| Ginger Society">
+<Layout title="GingerReleaser | Ginger Society">
   <!-- Hero Section -->
   <Hero
     title="GingerReleaser"
@@ -31,4 +31,21 @@ const productCards: any[] = [];
       />
     ))
   }
+  <div class="markdown-container"><ReleaserMD /></div>
 </Layout>
+
+<style>
+  .markdown-container {
+    padding: 50px;
+    padding-left: 160px;
+    padding-right: 160px;
+    font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    .markdown-container {
+      padding: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+</style>

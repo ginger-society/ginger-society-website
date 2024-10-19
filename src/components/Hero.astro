@@ -11,8 +11,12 @@ const {
 ---
 
 <style>
+  /* Base styles */
   .container {
     padding: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: var(--primary-bg-color);
   }
   .row {
     display: flex;
@@ -51,8 +55,23 @@ const {
     right: 0;
   }
 
+  /* Dark theme */
+  @media (prefers-color-scheme: dark) {
+    .btn-links {
+      color: #f85907;
+    }
+    .btn-primary {
+      background-color: #f85907;
+    }
+  }
+
   /* Responsive styles */
   @media (max-width: 768px) {
+    .container {
+      padding: 20ps;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
     .row {
       flex-direction: column; /* Stack elements vertically on mobile */
       align-items: center; /* Center items */
@@ -73,9 +92,9 @@ const {
         <h1>{title}</h1>
         <p>{description}</p>
         <div style="display: flex; gap: 20px;" class="mb-6">
-          <a href={primaryLink} class="btn btn-primary btn-lg"
-            >{primaryLinkLabel}</a
-          >
+          <a href={primaryLink} class="btn btn-primary btn-lg">
+            {primaryLinkLabel}
+          </a>
           {
             secondaryLinkLabel && (
               <a href={secondaryLink} class="btn btn-lg btn-links">

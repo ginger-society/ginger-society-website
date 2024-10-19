@@ -37,9 +37,13 @@ const navLinks = [
     const subLinks = document.querySelectorAll('.projects-links a.dropdown-item');
 
     subLinks.forEach((subLink) => {
-      if (currentPath.startsWith('/products/') && subLink.getAttribute('href') === currentPath) {
+      if (currentPath.startsWith('/products/') && subLink.getAttribute('href') === currentPath && projectsLi) {
         projectsLi.classList.add('active'); // Add active class to <li> of Projects
-        projectsLi.querySelector('a.projects-link').classList.add('active'); // Highlight Projects link
+            const projectLink = projectsLi.querySelector('a.projects-link');
+        if (projectLink) {
+            projectLink.classList.add('active'); // Highlight Projects link
+        }
+        
         subLink.classList.add('active'); // Highlight the specific project link
       }
     });

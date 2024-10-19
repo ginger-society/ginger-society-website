@@ -112,7 +112,7 @@ const productCards: any[] = [
 ];
 ---
 
-<Layout title="GingerDJ Framework| Ginger Society">
+<Layout title="Starter Templates| Ginger Society">
   <!-- Product Sections (Features) -->
   {
     productCards.map((product) => (
@@ -123,6 +123,8 @@ const productCards: any[] = [
         imgAlt={product.imgAlt}
         primaryLink={product.primaryLink}
         primaryLinkLabel={product.primaryLinkLabel}
+        secondaryLink={product.secondaryLink}
+        secondaryLinkLabel={product.secondaryLinkLabel}
         reversed={product.reversed}
       />
     ))

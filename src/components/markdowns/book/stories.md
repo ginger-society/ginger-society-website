@@ -35,7 +35,7 @@ GingerBook creates three different routes and a tree navigation while following 
 - `-` turns into a space
 - `--` turns into a nested story
 
-![Story Tree Navigation](./img/story-navigation.png)
+![Story Tree Navigation](/img/story-navigation.png)
 
 
 ## Name Customization

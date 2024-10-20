@@ -41,5 +41,5 @@ Story.meta = {
 If you need a quick reminder of all the hotkeys, you can open the about addon:
 
 
-![Hotkeys cheatsheet](./img/hotkeys.png)
+![Hotkeys cheatsheet](/img/hotkeys.png)
 

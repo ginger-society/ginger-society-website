@@ -66,7 +66,7 @@ Controls.argTypes = {
 
 GingerBook detects `args` / `argTypes` and provides the Control UI so you can update the component without touching the code. You can define primitive types through `args` and enums through `argTypes`:
 
-![Controls](./img/controls.png)
+![Controls](/img/controls.png)
 
 
 You can also create multiple stories by assigning different default `args` / `argTypes` to the same component:

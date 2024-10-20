@@ -7,7 +7,7 @@ title: Width
 GingerBook is responsive by default, so to test your components for different screens you can use your browser's dev tools. However, GingerBook also provides an addon to streamline this workflow even more:
 
 
-![Width](./img/width.png)
+![Width](/img/width.png)
 
 You can use these default viewport widths (px):
 

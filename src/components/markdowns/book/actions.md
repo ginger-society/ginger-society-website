@@ -24,7 +24,7 @@ MyStory.argTypes = {
 
 The click on this button creates a notification so you can inspect the event that was emitted:
 
-![Actions](./img/actions.png)
+![Actions](/img/actions.png)
 
 
 # Direct usage

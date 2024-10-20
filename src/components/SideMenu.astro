@@ -83,7 +83,7 @@ const { menuItems } = Astro.props;
 
 <div class="sideMenu">
   {
-    menuItems.map((item) => (
+    menuItems.map((item: { title: unknown; subMenu: any[] }) => (
       <div class="menuItem">
         <div class="menu__list-item-collapsible">
           <a class="menuLink">
@@ -93,17 +93,23 @@ const { menuItems } = Astro.props;
         </div>
         {item.subMenu && (
           <ul class="subMenu">
-            {item.subMenu.map((subItem) => (
-              <li class="subMenuItem">
-                <a
-                  href={subItem.link}
-                  target={subItem.external ? "_blank" : "_self"}
-                  rel={subItem.external ? "noopener noreferrer" : ""}
-                >
-                  {subItem.title}
-                </a>
-              </li>
-            ))}
+            {item.subMenu.map(
+              (subItem: {
+                link: string | URL | null | undefined;
+                external: any;
+                title: unknown;
+              }) => (
+                <li class="subMenuItem">
+                  <a
+                    href={subItem.link}
+                    target={subItem.external ? "_blank" : "_self"}
+                    rel={subItem.external ? "noopener noreferrer" : ""}
+                  >
+                    {subItem.title}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         )}
       </div>

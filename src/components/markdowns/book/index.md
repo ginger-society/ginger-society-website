@@ -2,7 +2,6 @@
 id: intro
 title: Introduction
 ---
-# Ginger Book
 
 **GingerBook is a drop-in alternative to <a href="https://storybook.js.org/">Storybook</a>**. It is a tool for developing and testing your React components in an environment that's isolated and faster than most real-world applications. GingerBook also creates an index of your components, so you can easily test them through tools like <a href="https://playwright.dev/">Playwright</a>.
 

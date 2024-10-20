@@ -8,14 +8,14 @@ const { title, content } = Astro.props;
 ---
 
 <style>
-  /* Styles for the page header content */
+  /* Base styles for light theme */
   .page-header-content {
-    background-color: #1c1c1e; /* Dark background */
-    color: #e5e5e5; /* Light text color */
+    background-color: #f8f9fa; /* Light background */
+    color: #333; /* Dark text color */
     padding: 50px 20px; /* Padding around the content */
     text-align: center; /* Center the text */
     border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   }
 
   .page-header-content h1 {
@@ -27,6 +27,15 @@ const { title, content } = Astro.props;
     font-size: 1rem; /* Medium paragraph size */
     line-height: 1.6; /* Line height for readability */
     margin: 0; /* Reset margin */
+  }
+
+  /* Dark theme styles */
+  @media (prefers-color-scheme: dark) {
+    .page-header-content {
+      background-color: #1c1c1e; /* Dark background */
+      color: #e5e5e5; /* Light text color */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+    }
   }
 </style>
 

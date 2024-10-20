@@ -8,11 +8,12 @@ const { title } = Astro.props;
 ---
 
 <style>
+  /* Base styles for light theme */
   .text-card-wrapper {
     margin-bottom: 20px;
     border: 1px solid #3a3a3c;
     border-radius: 8px;
-    background-color: #3a3a3c;
+    background-color: #f8f9fa; /* Light background */
     padding-left: 20px;
   }
 
@@ -20,7 +21,7 @@ const { title } = Astro.props;
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #e5e5e5;
+    color: #333; /* Dark text color */
   }
 
   .card-body {
@@ -30,7 +31,7 @@ const { title } = Astro.props;
   .card-text p,
   .card-text ul {
     font-size: 1rem;
-    color: #d1d1d6;
+    color: #555; /* Dark text color */
     margin: 0;
     line-height: 1.6;
   }
@@ -41,6 +42,23 @@ const { title } = Astro.props;
 
   .card-text ul li {
     margin-bottom: 10px;
+  }
+
+  /* Dark theme styles */
+  @media (prefers-color-scheme: dark) {
+    .text-card-wrapper {
+      border: 1px solid #6c757d; /* Lighter border for dark mode */
+      background-color: #3a3a3c; /* Dark background */
+    }
+
+    .sub-title {
+      color: #e5e5e5; /* Light text color */
+    }
+
+    .card-text p,
+    .card-text ul {
+      color: #d1d1d6; /* Light text color for card text */
+    }
   }
 </style>
 

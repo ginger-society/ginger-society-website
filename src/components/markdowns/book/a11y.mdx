@@ -1,0 +1,26 @@
+---
+id: a11y
+title: Accessibility
+---
+
+
+GingerBook is accessible. If you want to build accessible component, the wrapping environment should be accessible and keyboard friendly too. That's why your story comes first and the side navigation / addons second.
+
+GingerBook also includes an a11y testing through [axe-core](https://github.com/dequelabs/axe-core), so you can fix any a11y violations in your components.
+
+You have to enable it in your `.ginger-book/config.mjs`:
+
+```js
+/** @type {import('@ginger-society/ginger-book').UserConfig} */
+export default {
+  addons: {
+    a11y: {
+      enabled: true,
+    },
+  },
+};
+```
+
+
+![A11y addon](./img/a11y.png)
+

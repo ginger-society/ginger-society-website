@@ -1,0 +1,133 @@
+---
+const menuItems = [
+  {
+    title: "Getting Started",
+    subMenu: [
+      { title: "Introduction", link: "/docs/ginger-book/" },
+      { title: "Setup", link: "/docs/ginger-book/setup" },
+      { title: "Stories", link: "/docs/ginger-book/stories" },
+      { title: "Decorators", link: "/docs/ginger-book/decorators" },
+    ],
+  },
+  {
+    title: "Features",
+    subMenu: [
+      { title: "CSS", link: "/docs/ginger-book/css" },
+      { title: "Hotkeys", link: "/docs/ginger-book/hotkeys" },
+      { title: "MDX", link: "/docs/ginger-book/mdx" },
+      { title: "Meta", link: "/docs/ginger-book/meta" },
+      { title: "Mock Date", link: "/docs/ginger-book/mock-date" },
+      { title: "Providers", link: "/docs/ginger-book/providers" },
+      { title: "TypeScript", link: "/docs/ginger-book/typescript" },
+      { title: "Visual Snapshots", link: "/docs/ginger-book/visual-snapshots" },
+    ],
+  },
+  { title: "Addons", link: "#" },
+  { title: "Recipes", link: "#" },
+  { title: "Configuration", link: "#" },
+  { title: "Help", link: "#" },
+];
+---
+
+<style>
+  .sideMenu {
+    max-width: 250px;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+  }
+
+  .menuItem {
+    margin-bottom: 10px;
+  }
+
+  .menuLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menuLink:hover {
+    background-color: #e9ecef;
+  }
+
+  .subMenu {
+    padding-left: 15px;
+    margin-top: 5px;
+  }
+
+  .subMenuItem {
+    margin: 5px 0;
+  }
+
+  .subMenuItem a {
+    color: #555;
+    text-decoration: none;
+  }
+
+  .subMenuItem a:hover {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .toggleIcon {
+    font-size: 12px;
+    transition: transform 0.3s;
+  }
+
+  .expanded .toggleIcon {
+    transform: rotate(90deg);
+  }
+
+  .menu__list-item-collapsible {
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const collapsibles = document.querySelectorAll(
+      ".menu__list-item-collapsible"
+    );
+    collapsibles.forEach((item) => {
+      item.addEventListener("click", () => {
+        const subMenu = item.nextElementSibling;
+        if (subMenu) {
+          subMenu.classList.toggle("expanded");
+        }
+      });
+    });
+  });
+</script>
+
+<div class="sideMenu">
+  {
+    menuItems.map((item) => (
+      <div class="menuItem">
+        <div class="menu__list-item-collapsible">
+          <a href={item.link || "#"} class="menuLink">
+            {item.title}
+            {item.subMenu && <span class="toggleIcon">▸</span>}
+          </a>
+        </div>
+        {item.subMenu && (
+          <ul class="subMenu">
+            {item.subMenu.map((subItem) => (
+              <li class="subMenuItem">
+                <a href={subItem.link}>{subItem.title}</a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    ))
+  }
+</div>

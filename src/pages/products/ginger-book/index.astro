@@ -1,7 +1,7 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/Hero.astro";
-import ProductCard from "../../components/ProductCard.astro";
+import Layout from "../../../layouts/Layout.astro";
+import Hero from "../../../components/Hero.astro";
+import ProductCard from "../../../components/ProductCard.astro";
 
 // Data for each product card (used for sections)
 const productCards: any[] = [
@@ -33,13 +33,15 @@ const productCards: any[] = [
 ];
 ---
 
-<Layout title="GingerBook | Ginger Society">
+<Layout title="GingerBook">
   <!-- Hero Section -->
   <Hero
     title="GingerBook"
     description="Build and test UI components independently"
-    primaryLinkLabel="View on github"
-    primaryLink="https://github.com/ginger-society/ginger-book"
+    primaryLinkLabel="Read docs"
+    primaryLink="/products/ginger-book/docs"
+    secondaryLink="https://github.com/ginger-society/ginger-book"
+    secondaryLinkLabel="View on github"
     imgUrl="https://www.gingersociety.org/images/ginger-book.png"
   />
 

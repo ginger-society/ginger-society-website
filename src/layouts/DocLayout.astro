@@ -1,0 +1,40 @@
+---
+// src/layouts/DocLayout.astro
+
+import SideMenu from "../components/SideMenu.astro";
+import Layout from "../layouts/Layout.astro";
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <div class="doc-container">
+    <SideMenu />
+    <div class="markdown-container">
+      <slot />
+    </div>
+  </div>
+</Layout>
+<style is:global>
+  .doc-container {
+    display: flex;
+  }
+  .markdown-container {
+    padding: 50px;
+    padding-left: 160px;
+    padding-right: 160px;
+    font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    .markdown-container {
+      padding: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .markdown-container img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%; /* To prevent upscaling beyond the container */
+    object-fit: contain; /* Ensures the image scales proportionally */
+  }
+</style>

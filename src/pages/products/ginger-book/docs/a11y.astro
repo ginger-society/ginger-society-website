@@ -1,10 +1,12 @@
 ---
 import DocLayout from "../../../../layouts/DocLayout.astro";
-import { Content as A11y } from "../../../../components/markdowns/book/a11y.md";
+import {
+  Content,
+  frontmatter,
+} from "../../../../components/markdowns/book/a11y.md";
 import { menuItems } from "../../../../contents/ginger-book-side-menu-config";
 ---
 
-<DocLayout title="A11y Documentation" menuItems={menuItems}>
-  <A11y />
+<DocLayout title={frontmatter.title} menuItems={menuItems}>
+  <Content />
 </DocLayout>
-

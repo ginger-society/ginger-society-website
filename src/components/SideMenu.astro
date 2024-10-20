@@ -6,12 +6,16 @@ const { menuItems } = Astro.props;
   .sideMenu {
     max-width: 250px;
     width: 100%;
-    background-color: #f8f9fa;
+    background-color: var(--side-menu-bg-color);
     padding: 20px;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid var(--side-menu-border-color);
     position: sticky;
     top: 20px;
     height: fit-content;
+    transition:
+      background-color 0.3s,
+      border-color 0.3s; /* Smooth transitions */
+    font-size: 1rem;
   }
 
   .menuItem {
@@ -23,13 +27,14 @@ const { menuItems } = Astro.props;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    color: #333;
+    color: var(--menu-link-color);
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.2s;
   }
 
   .menuLink:hover {
-    background-color: #e9ecef;
+    background-color: var(--menu-link-hover-bg-color);
   }
 
   .subMenu {
@@ -42,12 +47,13 @@ const { menuItems } = Astro.props;
   }
 
   .subMenuItem a {
-    color: #555;
+    color: var(--submenu-link-color);
     text-decoration: none;
+    transition: color 0.2s;
   }
 
   .subMenuItem a:hover {
-    color: #000;
+    color: var(--submenu-link-hover-color);
     text-decoration: underline;
   }
 
@@ -62,6 +68,30 @@ const { menuItems } = Astro.props;
 
   .menu__list-item-collapsible {
     cursor: pointer;
+  }
+
+  /* Dark theme variables */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --side-menu-bg-color: #343a40; /* Dark background */
+      --side-menu-border-color: #495057; /* Dark border */
+      --menu-link-color: #f8f9fa; /* Light link color */
+      --menu-link-hover-bg-color: #495057; /* Dark link hover background */
+      --submenu-link-color: #ced4da; /* Light submenu link color */
+      --submenu-link-hover-color: #ffffff; /* White on hover for submenu */
+    }
+  }
+
+  /* Light theme variables */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --side-menu-bg-color: #f8f9fa; /* Light background */
+      --side-menu-border-color: #ddd; /* Light border */
+      --menu-link-color: #333; /* Dark link color */
+      --menu-link-hover-bg-color: #e9ecef; /* Light link hover background */
+      --submenu-link-color: #555; /* Dark submenu link color */
+      --submenu-link-hover-color: #000; /* Black on hover for submenu */
+    }
   }
 </style>
 

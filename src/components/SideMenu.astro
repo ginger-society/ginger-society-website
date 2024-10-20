@@ -4,14 +4,13 @@ const { menuItems } = Astro.props;
 
 <style>
   .sideMenu {
-    max-width: 250px;
-    width: 100%;
+    min-width: 250px;
     background-color: var(--side-menu-bg-color);
     padding: 20px;
     border-right: 1px solid var(--side-menu-border-color);
     position: sticky;
     top: 20px;
-    height: fit-content;
+    min-height: 100vh;
     transition:
       background-color 0.3s,
       border-color 0.3s; /* Smooth transitions */

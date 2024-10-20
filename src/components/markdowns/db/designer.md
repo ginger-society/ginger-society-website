@@ -1,4 +1,7 @@
-# DB Designer
+---
+id: designer
+title: Designer
+---
 
 DB studio is a GUI based schema designer. You can think if it as UML diagram of your database
 

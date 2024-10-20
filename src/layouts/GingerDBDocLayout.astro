@@ -1,0 +1,10 @@
+---
+import DocLayout from "./DocLayout.astro";
+import { menuItems } from "../contents/ginger-db-side-menu-config";
+
+const { title } = Astro.props;
+---
+
+<DocLayout title={`${title} | GingerDB`} menuItems={menuItems}>
+  <slot />
+</DocLayout>

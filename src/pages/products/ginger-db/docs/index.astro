@@ -1,0 +1,12 @@
+---
+import {
+  Content,
+  frontmatter,
+} from "../../../../components/markdowns/db/index.md";
+import GingerDBDocLayout from "../../../../layouts/GingerDBDocLayout.astro";
+---
+
+<GingerDBDocLayout title={frontmatter.title}>
+  <h1>{frontmatter.title}</h1>
+  <Content />
+</GingerDBDocLayout>

@@ -1,32 +1,5 @@
 ---
-const menuItems = [
-  {
-    title: "Getting Started",
-    subMenu: [
-      { title: "Introduction", link: "/docs/ginger-book/" },
-      { title: "Setup", link: "/docs/ginger-book/setup" },
-      { title: "Stories", link: "/docs/ginger-book/stories" },
-      { title: "Decorators", link: "/docs/ginger-book/decorators" },
-    ],
-  },
-  {
-    title: "Features",
-    subMenu: [
-      { title: "CSS", link: "/docs/ginger-book/css" },
-      { title: "Hotkeys", link: "/docs/ginger-book/hotkeys" },
-      { title: "MDX", link: "/docs/ginger-book/mdx" },
-      { title: "Meta", link: "/docs/ginger-book/meta" },
-      { title: "Mock Date", link: "/docs/ginger-book/mock-date" },
-      { title: "Providers", link: "/docs/ginger-book/providers" },
-      { title: "TypeScript", link: "/docs/ginger-book/typescript" },
-      { title: "Visual Snapshots", link: "/docs/ginger-book/visual-snapshots" },
-    ],
-  },
-  { title: "Addons", link: "#" },
-  { title: "Recipes", link: "#" },
-  { title: "Configuration", link: "#" },
-  { title: "Help", link: "#" },
-];
+const { menuItems } = Astro.props;
 ---
 
 <style>
@@ -113,7 +86,7 @@ const menuItems = [
     menuItems.map((item) => (
       <div class="menuItem">
         <div class="menu__list-item-collapsible">
-          <a href={item.link || "#"} class="menuLink">
+          <a class="menuLink">
             {item.title}
             {item.subMenu && <span class="toggleIcon">▸</span>}
           </a>
@@ -122,7 +95,13 @@ const menuItems = [
           <ul class="subMenu">
             {item.subMenu.map((subItem) => (
               <li class="subMenuItem">
-                <a href={subItem.link}>{subItem.title}</a>
+                <a
+                  href={subItem.link}
+                  target={subItem.external ? "_blank" : "_self"}
+                  rel={subItem.external ? "noopener noreferrer" : ""}
+                >
+                  {subItem.title}
+                </a>
               </li>
             ))}
           </ul>

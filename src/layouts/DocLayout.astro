@@ -3,12 +3,12 @@
 
 import SideMenu from "../components/SideMenu.astro";
 import Layout from "../layouts/Layout.astro";
-const { title } = Astro.props;
+const { title, menuItems } = Astro.props;
 ---
 
 <Layout title={title}>
   <div class="doc-container">
-    <SideMenu />
+    <SideMenu menuItems={menuItems} />
     <div class="markdown-container">
       <slot />
     </div>

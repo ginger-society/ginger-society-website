@@ -1,8 +1,9 @@
 ---
 import DocLayout from "../../../../layouts/DocLayout.astro";
 import { Content as HTTP2 } from "../../../../components/markdowns/book/http2.md";
+import { menuItems } from "../../../../contents/ginger-book-side-menu-config";
 ---
 
-<DocLayout title="HTTP/2 Documentation">
+<DocLayout title="HTTP/2 Documentation" menuItems={menuItems}>
   <HTTP2 />
 </DocLayout>

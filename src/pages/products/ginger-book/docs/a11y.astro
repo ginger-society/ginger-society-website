@@ -1,12 +1,11 @@
 ---
-import DocLayout from "../../../../layouts/DocLayout.astro";
 import {
   Content,
   frontmatter,
 } from "../../../../components/markdowns/book/a11y.md";
-import { menuItems } from "../../../../contents/ginger-book-side-menu-config";
+import GingerBookDocLayout from "../../../../layouts/GingerBookDocLayout.astro";
 ---
 
-<DocLayout title={frontmatter.title} menuItems={menuItems}>
+<GingerBookDocLayout title={frontmatter.title}>
   <Content />
-</DocLayout>
+</GingerBookDocLayout>

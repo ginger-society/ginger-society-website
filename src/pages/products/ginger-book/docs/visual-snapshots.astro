@@ -1,9 +1,11 @@
 ---
-import DocLayout from "../../../../layouts/DocLayout.astro";
-import { Content as Stories } from "../../../../components/markdowns/book/visual-snapshots.md";
-import { menuItems } from "../../../../contents/ginger-book-side-menu-config";
+import {
+  Content,
+  frontmatter,
+} from "../../../../components/markdowns/book/visual-snapshots.md";
+import GingerBookDocLayout from "../../../../layouts/GingerBookDocLayout.astro";
 ---
 
-<DocLayout title="Stories Documentation" menuItems={menuItems}>
-  <Stories />
-</DocLayout>
+<GingerBookDocLayout title={frontmatter.title}>
+  <Content />
+</GingerBookDocLayout>

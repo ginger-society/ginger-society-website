@@ -1,9 +1,11 @@
 ---
-import DocLayout from "../../../../layouts/DocLayout.astro";
-import { Content } from "../../../../components/markdowns/book/mdx.md";
-import { menuItems } from "../../../../contents/ginger-book-side-menu-config";
+import {
+  Content,
+  frontmatter,
+} from "../../../../components/markdowns/book/mdx.md";
+import GingerBookDocLayout from "../../../../layouts/GingerBookDocLayout.astro";
 ---
 
-<DocLayout title="Mdx Documentation" menuItems={menuItems}>
+<GingerBookDocLayout title={frontmatter.title}>
   <Content />
-</DocLayout>
+</GingerBookDocLayout>

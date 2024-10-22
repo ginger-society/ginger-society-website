@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+---
+
+<Layout title="Manifesto">
+  <PageHeader
+    title="Contact Us"
+    content="Have questions ? Want to connect ?."
+  />
+
+  <div class="container">
+    <p>Write us to <strong>hello@gingersociety.org</strong></p>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    padding: 30px 150px;
+  }
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  }
+</style>

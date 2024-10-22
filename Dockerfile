@@ -21,10 +21,9 @@ RUN ginger-auth token-login ${GINGER_TOKEN}
 # Install dependencies
 RUN pnpm i
 
-RUN pnpm gen-icons
 # Build the project
-RUN pnpm build-book
+RUN pnpm build
 
-RUN aws s3 cp build/ s3://gingersociety-homepage/ --recursive
+RUN aws s3 cp dist/ s3://gingersociety-homepage/ --recursive
 
 RUN aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"

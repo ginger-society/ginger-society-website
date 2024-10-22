@@ -28,6 +28,7 @@ RUN pnpm build
 # Copy contents from the ginger-book-tech-docs S3 bucket into dist/products/ginger-book/tech-docs
 RUN aws s3 cp s3://ginger-book-tech-docs/ dist/products/ginger-book/tech-docs --recursive
 RUN aws s3 cp s3://ginger-ui-stories/ dist/products/ginger-ui/stories --recursive
+RUN aws s3 cp s3://ginger-dj-tech-docs/ dist/products/ginger-dj/docs --recursive
 
 RUN aws s3 cp dist/ s3://gingersociety-homepage/ --recursive
 

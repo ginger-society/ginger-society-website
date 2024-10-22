@@ -3,12 +3,12 @@
 
 import SideMenu from "../components/SideMenu.astro";
 import Layout from "../layouts/Layout.astro";
-const { title, menuItems } = Astro.props;
+const { title, menuItems, logo, menuTitle } = Astro.props;
 ---
 
 <Layout title={`${title} | Documentation`}>
   <div class="doc-container">
-    <SideMenu menuItems={menuItems} />
+    <SideMenu menuItems={menuItems} title={menuTitle} logo={logo} />
     <div class="markdown-container">
       <slot />
     </div>
@@ -44,11 +44,6 @@ const { title, menuItems } = Astro.props;
     padding-left: 4px;
     padding-right: 4px;
     background: var(--secondary-bg-color);
+    font-style: italic;
   }
-
-  /* @media (prefers-color-scheme: dark) {
-    .markdown-container p code {
-      background: #24292e;
-    }
-  } */
 </style>

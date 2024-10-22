@@ -5,5 +5,9 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://gingersociety.org", // Replace with your actual site URL
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      customPages: ["https://gingersociety.org/products/ginger-book/tech-docs"],
+    }),
+  ],
 });

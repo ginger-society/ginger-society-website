@@ -5,6 +5,11 @@ import { menuItems } from "../contents/ginger-db-side-menu-config";
 const { title } = Astro.props;
 ---
 
-<DocLayout title={`${title} | GingerDB`} menuItems={menuItems}>
+<DocLayout
+  title={`${title} | GingerDB`}
+  menuItems={menuItems}
+  logo="/img/ginger-db.png"
+  menuTitle="Ginger DB User guide"
+>
   <slot />
 </DocLayout>

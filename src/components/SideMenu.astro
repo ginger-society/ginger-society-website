@@ -1,16 +1,18 @@
 ---
-const { menuItems } = Astro.props;
+const { menuItems, title, logo } = Astro.props;
 ---
 
 <style>
   .sideMenu {
     min-width: 250px;
+    max-width: 250px;
     background-color: var(--side-menu-bg-color);
     padding: 20px;
     border-right: 1px solid var(--side-menu-border-color);
     position: sticky;
     top: 20px;
     min-height: 100vh;
+    height: fit-content;
     transition:
       background-color 0.3s,
       border-color 0.3s; /* Smooth transitions */
@@ -111,6 +113,8 @@ const { menuItems } = Astro.props;
 </script>
 
 <div class="sideMenu">
+  <img src={logo} width="100%" />
+  <h4>{title}</h4>
   {
     menuItems.map((item: { title: unknown; subMenu: any[] }) => (
       <div class="menuItem">

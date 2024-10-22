@@ -1,40 +1,8 @@
-## 0.3.0-nightly.0 - 2024-10-22
-fix:
- - [9ef2c80999](https://github.com/ginger-society/ginger-society-website9ef2c8099945a2141fc8d8132cbf222be41741f8) (Ginger Society Admin) fix: pipeline
-	
- - [845ba86d63](https://github.com/ginger-society/ginger-society-website845ba86d63deb32877a6b16e235abab6018b1fac) (Ginger Society Admin) fix: image refenence in markdown
-	
- - [0b9500b47e](https://github.com/ginger-society/ginger-society-website0b9500b47e2c103c3075fd8fced236cfcaa72bf2) (Ginger Society Admin) fix: build fixes
-	
- - [ac6def42ef](https://github.com/ginger-society/ginger-society-websiteac6def42ef2f7e0b2eae278b4378fc9855fedd57) (Ginger Society Admin) fix: minor css changes
-	
- - [c3ee606ae0](https://github.com/ginger-society/ginger-society-websitec3ee606ae01e44d8d05675dce045e94471957229) (Ginger Society Admin) fix: hover and selected color fix for navigator in long text component
-	
- - [cd15c4f597](https://github.com/ginger-society/ginger-society-websitecd15c4f5977f58eb4cfbb8a00076a755e6117e95) (Ginger Society Admin) fix: css issues in header
-	
- - [68e8ccbfc7](https://github.com/ginger-society/ginger-society-website68e8ccbfc723a8eb74b1bc1f7ea23907e9682f72) (Ginger Society Admin) fix: linting issues
-	
+## 0.4.0-nightly.0 - 2024-10-22
 chore:
- - [57bc751b4c](https://github.com/ginger-society/ginger-society-website57bc751b4cf2a35ab9e1d4e206a3eba620620def) (Ginger Society Admin) chore: version bump to 0.3.0-nightly.0
+ - [2c4778d43f](https://github.com/ginger-society/ginger-society-website2c4778d43fcfff84333a5ee1792dc9627d44545b) (Ginger Society Admin) chore: version bump to 0.4.0-nightly.0
 	
- - [11cea19891](https://github.com/ginger-society/ginger-society-website11cea19891b5a7b5acbdb972208e5b8fefddcbce) (Ginger Society Admin) chore: adjusted the height for the sponsar card
-	
- - [69607950d5](https://github.com/ginger-society/ginger-society-website69607950d5775ab6ad4e4250423f2039eabc419f) (Ginger Society Admin) chore: changing height for the sponsor card for mobile
-	
- - [3e122f4595](https://github.com/ginger-society/ginger-society-website3e122f4595f83817e4d44273e742f478e1aca69b) (Ginger Society Admin) chore: debugging scroller width
-	
- - [34e3c11f43](https://github.com/ginger-society/ginger-society-website34e3c11f431fb83051e9c7ba23bc44f1c6e66cbb) (Ginger Society Admin) chore: debugging scroll issue
-	
- - [bb5b46e27d](https://github.com/ginger-society/ginger-society-websitebb5b46e27db57426c85e375c95006977df9f53cd) (Ginger Society Admin) chore: minor css changes
-	
- - [25fad4d42d](https://github.com/ginger-society/ginger-society-website25fad4d42d0bdef5cb293aa905a1dd6483b73e90) (Ginger Society Admin) chore: debugging scroll width
-	
- - [cf3c4d0c16](https://github.com/ginger-society/ginger-society-websitecf3c4d0c165c1b6ae67eee427daacc4328925371) (Ginger Society Admin) chore: debugging mobile ui for the scroll width
-	
- - [6d83367423](https://github.com/ginger-society/ginger-society-website6d83367423a5ad7c6aea7382796e82ec6ae5f502) (Ginger Society Admin) chore: minor css fixes
-	
- - [2e32259164](https://github.com/ginger-society/ginger-society-website2e32259164a5641b1137d948920411f296a8a07b) (Ginger Society Admin) chore: minor css changes
-	
+## 0.3.0-nightly.0 - 2024-10-22
 feat:
  - [b3a4f54ba5](https://github.com/ginger-society/ginger-society-websiteb3a4f54ba539c98ff88d09520505ca2faf6abc1f) (Ginger Society Admin) feat: added metadata
 	
@@ -88,4 +56,40 @@ feat:
 	
 Initial
  - [c1629963e1](https://github.com/ginger-society/ginger-society-websitec1629963e1f90e18d91ce34bff40abb8e7948a02) (houston[bot]) Initial commit from Astro
+	
+fix:
+ - [9ef2c80999](https://github.com/ginger-society/ginger-society-website9ef2c8099945a2141fc8d8132cbf222be41741f8) (Ginger Society Admin) fix: pipeline
+	
+ - [845ba86d63](https://github.com/ginger-society/ginger-society-website845ba86d63deb32877a6b16e235abab6018b1fac) (Ginger Society Admin) fix: image refenence in markdown
+	
+ - [0b9500b47e](https://github.com/ginger-society/ginger-society-website0b9500b47e2c103c3075fd8fced236cfcaa72bf2) (Ginger Society Admin) fix: build fixes
+	
+ - [ac6def42ef](https://github.com/ginger-society/ginger-society-websiteac6def42ef2f7e0b2eae278b4378fc9855fedd57) (Ginger Society Admin) fix: minor css changes
+	
+ - [c3ee606ae0](https://github.com/ginger-society/ginger-society-websitec3ee606ae01e44d8d05675dce045e94471957229) (Ginger Society Admin) fix: hover and selected color fix for navigator in long text component
+	
+ - [cd15c4f597](https://github.com/ginger-society/ginger-society-websitecd15c4f5977f58eb4cfbb8a00076a755e6117e95) (Ginger Society Admin) fix: css issues in header
+	
+ - [68e8ccbfc7](https://github.com/ginger-society/ginger-society-website68e8ccbfc723a8eb74b1bc1f7ea23907e9682f72) (Ginger Society Admin) fix: linting issues
+	
+chore:
+ - [57bc751b4c](https://github.com/ginger-society/ginger-society-website57bc751b4cf2a35ab9e1d4e206a3eba620620def) (Ginger Society Admin) chore: version bump to 0.3.0-nightly.0
+	
+ - [11cea19891](https://github.com/ginger-society/ginger-society-website11cea19891b5a7b5acbdb972208e5b8fefddcbce) (Ginger Society Admin) chore: adjusted the height for the sponsar card
+	
+ - [69607950d5](https://github.com/ginger-society/ginger-society-website69607950d5775ab6ad4e4250423f2039eabc419f) (Ginger Society Admin) chore: changing height for the sponsor card for mobile
+	
+ - [3e122f4595](https://github.com/ginger-society/ginger-society-website3e122f4595f83817e4d44273e742f478e1aca69b) (Ginger Society Admin) chore: debugging scroller width
+	
+ - [34e3c11f43](https://github.com/ginger-society/ginger-society-website34e3c11f431fb83051e9c7ba23bc44f1c6e66cbb) (Ginger Society Admin) chore: debugging scroll issue
+	
+ - [bb5b46e27d](https://github.com/ginger-society/ginger-society-websitebb5b46e27db57426c85e375c95006977df9f53cd) (Ginger Society Admin) chore: minor css changes
+	
+ - [25fad4d42d](https://github.com/ginger-society/ginger-society-website25fad4d42d0bdef5cb293aa905a1dd6483b73e90) (Ginger Society Admin) chore: debugging scroll width
+	
+ - [cf3c4d0c16](https://github.com/ginger-society/ginger-society-websitecf3c4d0c165c1b6ae67eee427daacc4328925371) (Ginger Society Admin) chore: debugging mobile ui for the scroll width
+	
+ - [6d83367423](https://github.com/ginger-society/ginger-society-website6d83367423a5ad7c6aea7382796e82ec6ae5f502) (Ginger Society Admin) chore: minor css fixes
+	
+ - [2e32259164](https://github.com/ginger-society/ginger-society-website2e32259164a5641b1137d948920411f296a8a07b) (Ginger Society Admin) chore: minor css changes
 	

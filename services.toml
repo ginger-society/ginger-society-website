@@ -1,0 +1,13 @@
+dir = "src/services"
+lang = "TS"
+organization_id = "ginger-society"
+service_type = "Portal"
+
+[services]
+
+[portals_refs]
+
+[urls]
+dev = "http://localhost:3000"
+prod = "http://localhost:8081"
+stage = "https://gingersociety.org"

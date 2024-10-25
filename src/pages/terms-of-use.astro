@@ -1,0 +1,100 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import LongText from "../components/LongText.astro";
+import LongTextSection from "../components/LongTextSection.astro";
+
+const navItems = [
+  { id: "item1", label: "Acceptance of Terms" },
+  { id: "item2", label: "Changes to the Terms" },
+  { id: "item3", label: "Eligibility" },
+  { id: "item4", label: "Account Registration" },
+  { id: "item5", label: "Use of the Service" },
+  { id: "item6", label: "User Content" },
+  { id: "item7", label: "Termination" },
+  { id: "item8", label: "Limitation of Liability" },
+  { id: "item9", label: "Governing Law and Dispute Resolution" },
+];
+---
+
+<Layout title="Terms of Use">
+  <PageHeader
+    title="Terms of Use"
+    content="Effective Date: 25th Oct 2024. Welcome to Ginger Society. These Terms of Use govern your use of our platform. Please read them carefully."
+  />
+
+  <LongText navItems={navItems}>
+    <LongTextSection id="item1" title="Acceptance of Terms">
+      <p>
+        By using or accessing the Service provided by Ginger Society ("we,"
+        "us," or "our"), you agree to these Terms of Use. If you do not agree,
+        please do not use the Service.
+      </p>
+    </LongTextSection>
+
+    <LongTextSection id="item2" title="Changes to the Terms">
+      <p>
+        We reserve the right to update these Terms at any time. Changes will be
+        effective upon posting. Continued use of the Service after changes
+        implies acceptance.
+      </p>
+    </LongTextSection>
+
+    <LongTextSection id="item3" title="Eligibility">
+      <p>
+        You must be 18 years or older to use this Service. By accessing the
+        Service, you confirm that you are eligible to enter into this agreement.
+      </p>
+    </LongTextSection>
+
+    <LongTextSection id="item4" title="Account Registration">
+      <p>
+        To access certain features of the Service, you may be required to
+        register an account. You agree to provide accurate and up-to-date
+        information. You are responsible for safeguarding your account details.
+      </p>
+    </LongTextSection>
+
+    <LongTextSection id="item5" title="Use of the Service">
+      <p>
+        You agree to use the Service in compliance with all applicable laws and
+        not to use it for any unlawful or harmful activities. We reserve the
+        right to terminate or restrict access if misuse is detected.
+      </p>
+    </LongTextSection>
+
+    <LongTextSection id="item6" title="User Content">
+      <p>
+        You are responsible for any content you upload or share on the platform.
+        By submitting content, you grant Ginger Society a non-exclusive,
+        royalty-free license to use and distribute it as part of our Service. If
+        you are uploading them on an on prem installation of the platform then
+        its yours.
+      </p>
+    </LongTextSection>
+
+    <LongTextSection id="item7" title="Termination">
+      <p>
+        We may terminate or suspend your account at any time without notice if
+        we determine you are in violation of these Terms. Upon termination, you
+        must discontinue use of the Service.
+      </p>
+    </LongTextSection>
+
+    <LongTextSection id="item8" title="Limitation of Liability">
+      <p>
+        To the maximum extent permitted by law, Ginger Society is not liable for
+        any indirect, incidental, or consequential damages resulting from your
+        use of the Service.
+      </p>
+    </LongTextSection>
+
+    <LongTextSection id="item9" title="Governing Law and Dispute Resolution">
+      <p>
+        These Terms are governed by the principles of equity and fair use. In
+        case of any disputes, they will be resolved through binding arbitration
+        except for intellectual property matters, which may be settled in court.
+      </p>
+    </LongTextSection>
+  </LongText>
+</Layout>

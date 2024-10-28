@@ -1,4 +1,17 @@
 ---
+// Define the Props type
+export type FeatureProps = {
+  title: string;
+  description: string;
+  imgSrc: string;
+  imgAlt: string;
+  secondaryLinkLabel?: string; // Optional
+  secondaryLink?: string;       // Optional
+  primaryLinkLabel?: string;    // Optional
+  primaryLink?: string;          // Optional
+  reversed?: boolean;            // Optional
+};
+
 const {
   title,
   description,
@@ -86,12 +99,12 @@ const {
       <h2>{title}</h2>
       <p>{description}</p>
       <div class="Learn-more">
-        <a href={primaryLink}
-          >{primaryLinkLabel}<i class="ph-arrow-right"></i></a
-        >
-        <a href={secondaryLink} class="secondary-link">
-          {secondaryLinkLabel}<i class="ph-arrow-right"></i>
-        </a>
+        {primaryLink && primaryLinkLabel && (
+          <a href={primaryLink}>{primaryLinkLabel}<i class="ph-arrow-right"></i></a>
+        )}
+        {secondaryLink && secondaryLinkLabel && (
+          <a href={secondaryLink} class="secondary-link">{secondaryLinkLabel}<i class="ph-arrow-right"></i></a>
+        )}
       </div>
     </div>
   </div>

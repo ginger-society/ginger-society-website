@@ -1,20 +1,16 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
-import ProductCard from "../../components/ProductCard.astro";
+import ProductCard, { type FeatureProps } from "../../components/ProductCard.astro";
 
 // Data for each product card (used for sections)
-const productCards = [
+const productCards: FeatureProps[] = [
   {
     title: "OpenAPI Spec",
     description:
       "Get swagger UI out of the box to test your API. Create custom request and response type with pre and post handler validation of the data.",
     imgSrc: "/img/swagger.png",
     imgAlt: "Message inbox",
-    primaryLink: "",
-    primaryLinkLabel: "",
-    secondaryLink: "https://docs.gingersociety.org/docs/ginger-dj",
-    secondaryLinkLabel: "Know more",
     reversed: true,
   },
   {
@@ -23,10 +19,6 @@ const productCards = [
       "Get logs and metrics with built-in prometheus metrics collection for endpoints and data models with declarative syntax.",
     imgSrc: "/img/observability.png",
     imgAlt: "Message inbox",
-    primaryLink: "",
-    primaryLinkLabel: "",
-    secondaryLink: "https://docs.gingersociety.org/docs/ginger-dj",
-    secondaryLinkLabel: "Know more",
     reversed: false,
   },
   {
@@ -35,10 +27,6 @@ const productCards = [
       "Built upon Django's ORM which lets you design complex data models, Ensures SQL relations integrity and retrieve data with efficient query engine.",
     imgSrc: "/img/ginger-dj-orm.png",
     imgAlt: "Message inbox",
-    primaryLink: "",
-    primaryLinkLabel: "",
-    secondaryLink: "https://docs.gingersociety.org/docs/ginger-dj",
-    secondaryLinkLabel: "Know more",
     reversed: true,
   },
   {
@@ -47,10 +35,6 @@ const productCards = [
       "Bring in your own authentication and authorization logic. Supports persistent contextual data across middlewares.",
     imgSrc: "/img/pluggable-authentication.png",
     imgAlt: "Message inbox",
-    primaryLink: "",
-    primaryLinkLabel: "",
-    secondaryLink: "https://docs.gingersociety.org/docs/ginger-dj",
-    secondaryLinkLabel: "Know more",
     reversed: false,
   },
 ];

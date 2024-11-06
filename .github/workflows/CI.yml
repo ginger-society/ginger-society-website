@@ -17,6 +17,9 @@ jobs:
       pull-requests: write
       id-token: write
     steps:
+      - name: Get Logs URL
+        run: echo "Logs URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:

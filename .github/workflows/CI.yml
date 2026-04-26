@@ -35,19 +35,6 @@ jobs:
       - name: Update pipeline to running
         run: ginger-connector update-pipeline stage running
 
-      - uses: pnpm/action-setup@v4.0.0
-        with:
-          version: 8.7.1
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20.5
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install
-
       - name: Upload build files
         run: |
           docker buildx build . \

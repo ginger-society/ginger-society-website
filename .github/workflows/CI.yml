@@ -11,14 +11,14 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   release:
     name: Release
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: write
       pull-requests: write
       id-token: write
     steps:
       - name: Get Logs URL
-        run: echo "Logs URL https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}/job/${{ github.job }}"
+        run: echo "Logs URL https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
       - name: Checkout Repo
         uses: actions/checkout@v3

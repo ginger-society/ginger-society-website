@@ -11,3 +11,5 @@ service_type = "Portal"
 dev = "http://localhost:3000"
 prod = "http://localhost:8081"
 stage = "https://gingersociety.org"
+
+[urls_ws]

@@ -19,7 +19,7 @@ ENV DISTRIBUTION_ID=$DISTRIBUTION_ID
 RUN ginger-auth token-login ${GINGER_TOKEN}
 
 # Install dependencies
-RUN pnpm install --frozen-lockfile --prefer-offline --ignore-scripts --force
+RUN pnpm install --force
 
 # Build the project
 RUN pnpm build

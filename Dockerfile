@@ -18,8 +18,8 @@ ENV DISTRIBUTION_ID=$DISTRIBUTION_ID
 # Run the ginger-connector.debian commands
 RUN ginger-auth token-login ${GINGER_TOKEN}
 
-# Install dependencies
-RUN pnpm install --force
+# Install dependencies , --force is because its complaining that pnpm is not compatiple with the lockfile
+RUN pnpm i --force
 
 # Build the project
 RUN pnpm build

@@ -53,10 +53,6 @@ jobs:
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/homepage:latest
 
-      - name: Fail if upload failed
-        if: failure()
-        run: ginger-connector update-pipeline stage failed
-        continue-on-error: false
 
       - name: Update pipeline to passing
         if: success()

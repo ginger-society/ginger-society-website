@@ -1,4 +1,5 @@
-FROM gingersociety/vite-react-builder:latest 
+# Stage 1: Build the project
+FROM gingersociety/vite-react-builder:latest AS builder
 
 COPY . .
 
@@ -15,21 +16,26 @@ ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 ENV AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
 ENV DISTRIBUTION_ID=$DISTRIBUTION_ID
 
-# Run the ginger-connector.debian commands
 RUN ginger-auth token-login ${GINGER_TOKEN}
 
-# Install dependencies , --force is because its complaining that pnpm is not compatiple with the lockfile
 RUN pnpm i --force
 
-# Build the project
 RUN pnpm build
 
-
-# Copy contents from the ginger-book-tech-docs S3 bucket into dist/products/ginger-book/tech-docs
+# Pull additional content from S3 into dist
 RUN aws s3 cp s3://ginger-book-tech-docs/ dist/products/ginger-book/tech-docs --recursive
 RUN aws s3 cp s3://ginger-ui-stories/ dist/products/ginger-ui/stories --recursive
 RUN aws s3 cp s3://ginger-dj-tech-docs/ dist/products/ginger-dj/docs --recursive
 
+# Upload to S3 and invalidate CloudFront
 RUN aws s3 cp dist/ s3://gingersociety-homepage/ --recursive
-
 RUN aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*"
+
+# Stage 2: Serve with Nginx for k8s deployment
+FROM nginx:alpine
+
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,0 +1,57 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: build-pipeline
+  annotations:
+    x-gitter-trigger-branch: '["refs/heads/main", "refs/heads/dev-*"]'
+    x-gitter-enabled: "true"
+spec:
+  params:
+    - name: image_tag
+      type: string
+
+  tasks:
+
+    - name: build-website
+      runAfter:
+        - clone
+      taskRef:
+        resolver: cluster
+        params:
+          - name: kind
+            value: task
+          - name: name
+            value: build-vite-spa
+          - name: namespace
+            value: default
+
+    - name: push-frontend-image
+      runAfter:
+        - build-website
+      taskRef:
+        resolver: cluster
+        params:
+          - name: kind
+            value: task
+          - name: name
+            value: build-and-push-frontend-image
+          - name: namespace
+            value: default
+      params:
+        - name: image_tag
+          value: "$(params.image_tag)"
+        - name: org_id
+          value: "$(params.org_id)"
+        - name: image_name
+          value: "website"
+
+    - name: notify-version-update
+      runAfter:
+        - push-frontend-image
+      taskSpec:
+        steps:
+          - name: echo
+            image: alpine
+            script: |
+              #!/bin/sh
+              echo "Hello World - all previous tasks are done!"

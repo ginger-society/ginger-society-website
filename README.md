@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# Ginger Society Main website code repo
 
 ```sh
 npm create astro@latest -- --template basics
